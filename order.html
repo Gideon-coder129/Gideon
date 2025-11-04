@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Place an Order | GR Market</title>
+  <style>
+    :root {
+      --primary: #4a90e2;
+      --bg: #ffffff;
+      --text: #222;
+      --light: #f8fbff;
+    }
+    * { margin:0; padding:0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+    body { background: var(--bg); color: var(--text); line-height: 1.6; }
+    .container { width: 90%; max-width: 600px; margin: 0 auto; padding: 40px 20px; }
+    header {
+      background: white;
+      padding: 15px 0;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      position: sticky;
+      top: 0;
+    }
+    .logo { font-size: 24px; font-weight: 800; color: var(--primary); }
+    .back-btn {
+      display: inline-block;
+      margin: 20px 0;
+      color: var(--primary);
+      font-weight: 600;
+    }
+    h1 { color: var(--primary); margin: 30px 0 20px; }
+    .form-group {
+      margin-bottom: 20px;
+    }
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: 600;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      font-size: 1rem;
+    }
+    .btn {
+      display: inline-block;
+      padding: 15px 30px;
+      background: var(--primary);
+      color: white;
+      border-radius: 30px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.3s;
+    }
+    .btn:hover {
+      background: #3a7bd5;
+    }
+    footer {
+      text-align: center;
+      padding: 30px 0;
+      color: #666;
+      margin-top: 60px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container">
+      <a href="index.html" class="logo">GR Market</a>
+    </div>
+  </header>
+
+  <div class="container">
+    <a href="home.html" class="back-btn">← Back to Home</a>
+    <h1>Place an Order</h1>
+    <p>Fill out this form and we’ll get back to you within 1 hour via WhatsApp or phone!</p>
+
+    <form id="orderForm">
+      <div class="form-group">
+        <label for="name">Your Full Name</label>
+        <input type="text" id="name" required>
+      </div>
+      <div class="form-group">
+        <label for="phone">Phone Number (WhatsApp)</label>
+        <input type="tel" id="phone" placeholder="+254710755022" required>
+      </div>
+      <div class="form-group">
+        <label for="product">Product/Service You Want</label>
+        <input type="text" id="product" placeholder="e.g., Samsung Galaxy A15, 50kg Maize, TV Mounting" required>
+      </div>
+      <div class="form-group">
+        <label for="quantity">Quantity (if applicable)</label>
+        <input type="number" id="quantity" min="1" value="1">
+      </div>
+      <div class="form-group">
+        <label for="message">Special Instructions</label>
+        <textarea id="message" rows="4"></textarea>
+      </div>
+      <button type="submit" class="btn">Send Order Request</button>
+    </form>
+
+    <script>
+      document.getElementById('orderForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        const name = document.getElementById('name').value;
+        const phone = document.getElementById('phone').value.replace(/\D/g, '');
+        const product = document.getElementById('product').value;
+        const quantity = document.getElementById('quantity').value;
+        const message = document.getElementById('message').value;
+
+        const waMessage = `Hi GR Market,\n\nI'm ${name}.\nI want to order:\n${product} x ${quantity}\n\nSpecial instructions: ${message}\n\nCall/WhatsApp me at: ${phone}`;
+        
+        window.open(`https://wa.me/${phone}?text=${encodeURIComponent(waMessage)}`, '_blank');
+      });
+    </script>
+
+  </div>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 GR Market. Serving all of Nyanza Region.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
