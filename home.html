@@ -56,67 +56,49 @@
       color: #444;
     }
 
-    .products-grid {
+    .services-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 25px;
       margin-top: 40px;
     }
 
-    .product-card {
+    .service-card {
       background: white;
       border-radius: 12px;
       overflow: hidden;
       box-shadow: 0 4px 15px var(--shadow);
       transition: transform 0.3s;
     }
-    .product-card:hover { transform: translateY(-8px); }
+    .service-card:hover { transform: translateY(-8px); }
 
-    .product-img {
+    .service-img {
       width: 100%;
       height: 180px;
       object-fit: cover;
       position: relative;
     }
-    .price-tag {
-      position: absolute;
-      top: 10px;
-      right: 10px;
-      background: var(--accent);
-      color: white;
-      padding: 5px 12px;
-      border-radius: 4px;
-      font-weight: 600;
-      font-size: 0.9rem;
-    }
-
-    .product-info {
-      padding: 20px;
-    }
-    .product-info h3 {
+    .service-title {
       color: var(--primary);
-      margin-bottom: 10px;
       font-size: 1.2rem;
-    }
-    .product-info p {
-      color: #666;
-      margin-bottom: 15px;
-      font-size: 0.95rem;
+      padding: 15px 20px;
+      text-align: center;
+      background: #f0f8ff;
     }
 
-    .order-btn {
-      display: inline-block;
+    .service-link {
+      display: block;
       width: 100%;
       padding: 10px;
       background: var(--primary);
       color: white;
       text-align: center;
-      border-radius: 6px;
+      border-radius: 0 0 12px 12px;
       font-weight: 600;
       text-decoration: none;
       transition: background 0.2s;
     }
-    .order-btn:hover {
+    .service-link:hover {
       background: #3a7bd5;
     }
 
@@ -147,88 +129,55 @@
       <h1>GR Market – Your One-Stop Shop for Nyanza Region!</h1>
       <p>
         Serving Kisumu, Rongo, Kisii, Migori, and all of Nyanza with quality electronics, fresh cereals, professional repairs, TV mounting, and cyber services. 
-        Order online or via WhatsApp — we deliver fast, reliable, and with a smile!
+        Tap a service below to explore products and order today!
       </p>
     </section>
 
-    <div class="products-grid">
+    <div class="services-grid">
 
-      <!-- Product 1 -->
-      <div class="product-card">
-        <div class="product-img">
-          <img src="https://via.placeholder.com/300x180/4a90e2/ffffff?text=Smartphone" alt="Smartphone">
-          <div class="price-tag">Ksh 12,000</div>
+      <!-- Service 1 -->
+      <div class="service-card">
+        <div class="service-img">
+          <img src="https://via.placeholder.com/300x180/4a90e2/ffffff?text=Electronics" alt="Electronics">
         </div>
-        <div class="product-info">
-          <h3>Samsung Galaxy A15</h3>
-          <p>6.5" HD+ Display, 50MP Camera, 5000mAh Battery</p>
-          <a href="https://wa.me/254710755022?text=Hi%2C%20I%20want%20to%20order%20Samsung%20Galaxy%20A15%20for%20Ksh%2012%2C000" class="order-btn">Order Now →</a>
-        </div>
+        <div class="service-title">Selling Electronics</div>
+        <a href="electronics.html" class="service-link">View Products →</a>
       </div>
 
-      <!-- Product 2 -->
-      <div class="product-card">
-        <div class="product-img">
-          <img src="https://via.placeholder.com/300x180/34c759/ffffff?text=Laptop" alt="Laptop">
-          <div class="price-tag">Ksh 28,000</div>
+      <!-- Service 2 -->
+      <div class="service-card">
+        <div class="service-img">
+          <img src="https://via.placeholder.com/300x180/34c759/ffffff?text=Repairs" alt="Repairs">
         </div>
-        <div class="product-info">
-          <h3>Lenovo IdeaPad 3</h3>
-          <p>Intel Core i3, 8GB RAM, 256GB SSD, 15.6" FHD</p>
-          <a href="https://wa.me/254710755022?text=Hi%2C%20I%20want%20to%20order%20Lenovo%20IdeaPad%203%20for%20Ksh%2028%2C000" class="order-btn">Order Now →</a>
-        </div>
+        <div class="service-title">Repairs</div>
+        <a href="repairs.html" class="service-link">View Products →</a>
       </div>
 
-      <!-- Product 3 -->
-      <div class="product-card">
-        <div class="product-img">
-          <img src="https://via.placeholder.com/300x180/ff9e00/ffffff?text=TV" alt="TV">
-          <div class="price-tag">Ksh 15,000</div>
+      <!-- Service 3 -->
+      <div class="service-card">
+        <div class="service-img">
+          <img src="https://via.placeholder.com/300x180/ff9e00/ffffff?text=TV+Mounting" alt="TV Mounting">
         </div>
-        <div class="product-info">
-          <h3>Hisense 32" Smart TV</h3>
-          <p>HD Ready, Android TV, HDMI & USB Ports</p>
-          <a href="https://wa.me/254710755022?text=Hi%2C%20I%20want%20to%20order%20Hisense%2032%22%20Smart%20TV%20for%20Ksh%2015%2C000" class="order-btn">Order Now →</a>
-        </div>
+        <div class="service-title">TV Mounting</div>
+        <a href="tv-mounting.html" class="service-link">View Services →</a>
       </div>
 
-      <!-- Product 4 -->
-      <div class="product-card">
-        <div class="product-img">
-          <img src="https://via.placeholder.com/300x180/a0522d/ffffff?text=Maize" alt="Maize">
-          <div class="price-tag">Ksh 1,200/50kg</div>
+      <!-- Service 4 -->
+      <div class="service-card">
+        <div class="service-img">
+          <img src="https://via.placeholder.com/300x180/a0522d/ffffff?text=Cereals" alt="Cereals">
         </div>
-        <div class="product-info">
-          <h3>Quality Maize (50kg)</h3>
-          <p>Fresh, dry, pest-free — perfect for home or business</p>
-          <a href="https://wa.me/254710755022?text=Hi%2C%20I%20want%20to%20order%2050kg%20Maize%20for%20Ksh%201%2C200" class="order-btn">Order Now →</a>
-        </div>
+        <div class="service-title">All Cereals Available</div>
+        <a href="cereals.html" class="service-link">View Products →</a>
       </div>
 
-      <!-- Product 5 -->
-      <div class="product-card">
-        <div class="product-img">
-          <img src="https://via.placeholder.com/300x180/8a2be2/ffffff?text=Printing" alt="Printing">
-          <div class="price-tag">Ksh 5/page</div>
+      <!-- Service 5 -->
+      <div class="service-card">
+        <div class="service-img">
+          <img src="https://via.placeholder.com/300x180/8a2be2/ffffff?text=Cyber" alt="Cyber Services">
         </div>
-        <div class="product-info">
-          <h3>Document Printing</h3>
-          <p>A4, Color or B&W — Fast & Affordable</p>
-          <a href="https://wa.me/254710755022?text=Hi%2C%20I%20want%20to%20order%20document%20printing%20at%20Ksh%205%2Fpage" class="order-btn">Order Now →</a>
-        </div>
-      </div>
-
-      <!-- Product 6 -->
-      <div class="product-card">
-        <div class="product-img">
-          <img src="https://via.placeholder.com/300x180/ff6b35/ffffff?text=Repair" alt="Repair">
-          <div class="price-tag">From Ksh 500</div>
-        </div>
-        <div class="product-info">
-          <h3>Phone Repair</h3>
-          <p>Screen, Battery, Water Damage — Fast Fix Guaranteed</p>
-          <a href="https://wa.me/254710755022?text=Hi%2C%20I%20need%20phone%20repair%20starting%20from%20Ksh%20500" class="order-btn">Order Now →</a>
-        </div>
+        <div class="service-title">Online Cyber Services</div>
+        <a href="cyber-services.html" class="service-link">View Services →</a>
       </div>
 
     </div>
@@ -242,4 +191,4 @@
   </footer>
 
 </body>
-        </html>
+</html>
