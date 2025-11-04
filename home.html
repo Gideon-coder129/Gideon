@@ -13,7 +13,12 @@
       --shadow: rgba(0,0,0,0.08);
     }
     * { margin:0; padding:0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
-    body { background: var(--bg); color: var(--text); line-height: 1.6; }
+    body {
+      background: url('https://via.placeholder.com/1920x1080/34c759/ffffff?text=Home+Background') no-repeat center center fixed;
+      background-size: cover;
+      color: var(--text);
+      line-height: 1.6;
+    }
     .container { width: 90%; max-width: 1200px; margin: 0 auto; padding: 20px; }
     header {
       background: white;
@@ -41,8 +46,10 @@
     .hero {
       text-align: center;
       padding: 80px 20px;
-      background: linear-gradient(120deg, #fffaf0, #fffae6);
+      background: rgba(255,255,255,0.9);
       margin-bottom: 40px;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
     }
     .hero h1 {
       font-size: 2.8rem;
