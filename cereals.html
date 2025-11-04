@@ -3,76 +3,282 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Cereals | GR Electronics</title>
+  <title>All Cereals Available | GR Market</title>
   <style>
-    :root { --primary: #4a90e2; --bg: #ffffff; --text: #222; }
+    :root {
+      --primary: #4a90e2;
+      --bg: #ffffff;
+      --text: #222;
+      --light: #f8fbff;
+      --shadow: rgba(0,0,0,0.08);
+    }
     * { margin:0; padding:0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
-    body { background: var(--bg); color: var(--text); line-height: 1.6; }
-    .container { width: 90%; max-width: 1000px; margin: 0 auto; padding: 20px; }
-    header { background: white; padding: 15px 0; box-shadow: 0 2px 8px rgba(0,0,0,0.1); position: sticky; top: 0; }
+    body {
+      background: url('https://via.placeholder.com/1920x1080/a0522d/ffffff?text=Cereals+Background') no-repeat center center fixed;
+      background-size: cover;
+      color: var(--text);
+      line-height: 1.6;
+    }
+    .container { width: 90%; max-width: 1200px; margin: 0 auto; padding: 20px; }
+    header {
+      background: white;
+      padding: 15px 0;
+      box-shadow: 0 2px 8px var(--shadow);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
     .logo { font-size: 24px; font-weight: 800; color: var(--primary); }
-    .back-btn {
-      display: inline-block;
-      margin: 20px 0;
+    .nav-links {
+      display: flex;
+      gap: 20px;
+      margin-left: 20px;
+    }
+    .nav-links a {
       color: var(--primary);
       font-weight: 600;
+      padding: 6px 12px;
+      border-radius: 4px;
+      transition: background 0.2s;
     }
-    h1 { color: var(--primary); margin: 30px 0 20px; }
-    p { margin-bottom: 15px; }
-    .images-grid {
+    .nav-links a:hover { background: #f0f8ff; }
+
+    .section-title {
+      text-align: center;
+      font-size: 2.2rem;
+      color: var(--primary);
+      margin: 60px 0 30px;
+    }
+
+    .products-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-      gap: 15px;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
       margin: 30px 0;
     }
-    .images-grid img {
-      width: 100%;
-      height: 110px;
-      object-fit: cover;
-      border-radius: 8px;
-      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
-    }
-    .contact-box {
-      background: #f0f8ff;
-      padding: 25px;
+
+    .product-card {
+      background: white;
       border-radius: 12px;
-      margin: 40px 0;
+      overflow: hidden;
+      box-shadow: 0 4px 15px var(--shadow);
+      transition: transform 0.3s;
+    }
+    .product-card:hover { transform: translateY(-8px); }
+
+    .product-img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      position: relative;
+    }
+    .price-tag {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: #ff6b35;
+      color: white;
+      padding: 5px 12px;
+      border-radius: 4px;
+      font-weight: 600;
+      font-size: 0.9rem;
+    }
+
+    .product-info {
+      padding: 20px;
+    }
+    .product-info h3 {
+      color: var(--primary);
+      margin-bottom: 10px;
+      font-size: 1.2rem;
+    }
+    .product-info p {
+      color: #666;
+      margin-bottom: 15px;
+      font-size: 0.95rem;
+    }
+
+    .order-btn {
+      display: inline-block;
+      width: 100%;
+      padding: 10px;
+      background: var(--primary);
+      color: white;
       text-align: center;
+      border-radius: 6px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+    .order-btn:hover {
+      background: #3a7bd5;
+    }
+
+    .contact-box {
+      background: rgba(255,255,255,0.95);
+      padding: 30px;
+      border-radius: 12px;
+      margin: 50px 0;
+      text-align: center;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
     }
     .contact-box h2 { color: var(--primary); margin-bottom: 15px; }
+    .contact-box p {
+      margin: 8px 0;
+      font-size: 1.05rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px 0;
+      color: #666;
+      margin-top: 60px;
+    }
   </style>
 </head>
 <body>
 
   <header>
     <div class="container">
-      <a href="index.html" class="logo">GR</a>
+      <div class="logo">GR Market</div>
+      <div class="nav-links">
+        <a href="index.html">Welcome</a>
+        <a href="home.html">Home</a>
+        <a href="order.html">Order Form</a>
+      </div>
     </div>
   </header>
 
   <div class="container">
-    <a href="index.html" class="back-btn">← Back to Home</a>
-    <h1>All Cereals Available</h1>
-    <p>Stock up on the **freshest, cleanest cereals** in Nyanza! GR Electronics supplies high-quality maize, rice, beans, wheat, millet, sorghum, and more — perfect for households, schools, restaurants, and businesses.</p>
-    <p>Our cereals are sourced directly from trusted local farmers, stored in dry and hygienic conditions, and rigorously checked for pests and moisture. We offer flexible quantities — from 2kg to 100kg sacks — with **same-day delivery** across Rongo, Kisii, and Migori.</p>
-    <p>Whether you're preparing for a family event, running a kitchen, or managing inventory — GR has your back with reliable, affordable grains!</p>
 
-    <div class="images-grid">
-      <img src="https://via.placeholder.com/140x110/a0522d/ffffff?text=Maize" alt="Maize">
-      <img src="https://via.placeholder.com/140x110/a0522d/ffffff?text=Rice" alt="Rice">
-      <img src="https://via.placeholder.com/140x110/a0522d/ffffff?text=Beans" alt="Beans">
-      <img src="https://via.placeholder.com/140x110/a0522d/ffffff?text=Wheat" alt="Wheat">
-      <img src="https://via.placeholder.com/140x110/a0522d/ffffff?text=Millet" alt="Millet">
-      <img src="https://via.placeholder.com/140x110/a0522d/ffffff?text=Sorghum" alt="Sorghum">
+    <h1 class="section-title">All Cereals Available</h1>
+    <p style="text-align:center; max-width:800px; margin:0 auto 30px;">
+      Stock up on the freshest, cleanest cereals in Nyanza — maize, rice, beans, wheat, millet, sorghum, and more — perfect for homes, schools, and businesses.
+    </p>
+
+    <div class="products-grid">
+
+      <!-- Product 1 -->
+      <div class="product-card">
+        <div class="product-img">
+          <img src="https://via.placeholder.com/300x180/a0522d/ffffff?text=Maize" alt="Maize">
+          <div class="price-tag">Ksh 1,200/50kg</div>
+        </div>
+        <div class="product-info">
+          <h3>Quality Maize (50kg)</h3>
+          <p>Fresh, dry, pest-free — perfect for home or business</p>
+          <a href="https://wa.me/254710755022?text=Hi%2C%20I%20want%20to%20order%2050kg%20Maize%20for%20Ksh%201%2C200" class="order-btn">Order Now →</a>
+        </div>
+      </div>
+
+      <!-- Product 2 -->
+      <div class="product-card">
+        <div class="product-img">
+          <img src="https://via.placeholder.com/300x180/34c759/ffffff?text=Rice" alt="Rice">
+          <div class="price-tag">Ksh 2,500/25kg</div>
+        </div>
+        <div class="product-info">
+          <h3>Premium Rice (25kg)</h3>
+          <p>Long grain, fragrant, ideal for everyday meals</p>
+          <a href="https://wa.me/254710755022?text=Hi%2C%20I%20want%20to%20order%2025kg%20Rice%20for%20Ksh%202%2C500" class="order-btn">Order Now →</a>
+        </div>
+      </div>
+
+      <!-- Product 3 -->
+      <div class="product-card">
+        <div class="product-img">
+          <img src="https://via.placeholder.com/300x180/ff9e00/ffffff?text=Beans" alt="Beans">
+          <div class="price-tag">Ksh 3,000/20kg</div>
+        </div>
+        <div class="product-info">
+          <h3>Red Beans (20kg)</h3>
+          <p>High protein, rich flavor — great for stews and soups</p>
+          <a href="https://wa.me/254710755022?text=Hi%2C%20I%20want%20to%20order%2020kg%20Red%20Beans%20for%20Ksh%203%2C000" class="order-btn">Order Now →</a>
+        </div>
+      </div>
+
+      <!-- Product 4 -->
+      <div class="product-card">
+        <div class="product-img">
+          <img src="https://via.placeholder.com/300x180/8a2be2/ffffff?text=Wheat" alt="Wheat">
+          <div class="price-tag">Ksh 2,800/20kg</div>
+        </div>
+        <div class="product-info">
+          <h3>Wheat Flour (20kg)</h3>
+          <p>Perfect for chapati, bread, cakes, and pastries</p>
+          <a href="https://wa.me/254710755022?text=Hi%2C%20I%20want%20to%20order%2020kg%20Wheat%20Flour%20for%20Ksh%202%2C800" class="order-btn">Order Now →</a>
+        </div>
+      </div>
+
+      <!-- Product 5 -->
+      <div class="product-card">
+        <div class="product-img">
+          <img src="https://via.placeholder.com/300x180/ff6b35/ffffff?text=Millet" alt="Millet">
+          <div class="price-tag">Ksh 2,000/20kg</div>
+        </div>
+        <div class="product-info">
+          <h3>Millet (20kg)</h3>
+          <p>Gluten-free, nutritious, great for porridge and ugali</p>
+          <a href="https://wa.me/254710755022?text=Hi%2C%20I%20want%20to%20order%2020kg%20Millet%20for%20Ksh%202%2C000" class="order-btn">Order Now →</a>
+        </div>
+      </div>
+
+      <!-- Product 6 -->
+      <div class="product-card">
+        <div class="product-img">
+          <img src="https://via.placeholder.com/300x180/4a90e2/ffffff?text=Sorghum" alt="Sorghum">
+          <div class="price-tag">Ksh 1,800/20kg</div>
+        </div>
+        <div class="product-info">
+          <h3>Sorghum (20kg)</h3>
+          <p>Drought-resistant, high-yield — ideal for local dishes</p>
+          <a href="https://wa.me/254710755022?text=Hi%2C%20I%20want%20to%20order%2020kg%20Sorghum%20for%20Ksh%201%2C800" class="order-btn">Order Now →</a>
+        </div>
+      </div>
+
+      <!-- Product 7 -->
+      <div class="product-card">
+        <div class="product-img">
+          <img src="https://via.placeholder.com/300x180/34c759/ffffff?text=Corn" alt="Corn">
+          <div class="price-tag">Ksh 1,500/10kg</div>
+        </div>
+        <div class="product-info">
+          <h3>Corn Kernels (10kg)</h3>
+          <p>Sweet, juicy, perfect for roasting or grinding into flour</p>
+          <a href="https://wa.me/254710755022?text=Hi%2C%20I%20want%20to%20order%2010kg%20Corn%20Kernels%20for%20Ksh%201%2C500" class="order-btn">Order Now →</a>
+        </div>
+      </div>
+
+      <!-- Product 8 -->
+      <div class="product-card">
+        <div class="product-img">
+          <img src="https://via.placeholder.com/300x180/ff9e00/ffffff?text=Sunflower" alt="Sunflower Seeds">
+          <div class="price-tag">Ksh 2,200/20kg</div>
+        </div>
+        <div class="product-info">
+          <h3>Sunflower Seeds (20kg)</h3>
+          <p>High oil content, great for cooking or snacking</p>
+          <a href="https://wa.me/254710755022?text=Hi%2C%20I%20want%20to%20order%2020kg%20Sunflower%20Seeds%20for%20Ksh%202%2C200" class="order-btn">Order Now →</a>
+        </div>
+      </div>
+
+      <!-- Product 9 -->
+      <div class="product-card">
+        <div class="product-img">
+          <img src="https://via.placeholder.com/300x180/8a2be2/ffffff?text=Peas" alt="Peas">
+          <div class="price-tag">Ksh 2,600/20kg</div>
+        </div>
+        <div class="product-info">
+          <h3>Green Peas (20kg)</h3>
+          <p>Fresh, sweet, high in fiber — great for curries and stews</p>
+          <a href="https://wa.me/254710755022?text=Hi%2C%20I%20want%20to%20order%2020kg%20Green%20Peas%20for%20Ksh%202%2C600" class="order-btn">Order Now →</a>
+        </div>
+      </div>
+
     </div>
 
     <div class="contact-box">
       <h2>Order Cereals Now!</h2>
       <p><strong>Email:</strong> gideonombongi936@gmail.com</p>
       <p><strong>Phone/WhatsApp:</strong> 0710755022</p>
-      <p><strong>Delivery Areas:</strong> Rongo, Kisii & Migori, Nyanza Region</p>
-    </div>
-  </div>
-
-</body>
-</html>
+      <p><strong>Delivery:</strong> All of Nyanza Region — Kisumu,
