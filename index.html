@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>GR Electronics | Nyanza Region</title>
+  <style>
+    :root {
+      --primary: #4a90e2;
+      --bg: #ffffff;
+      --text: #222;
+      --light: #f8fbff;
+    }
+    * { margin:0; padding:0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+    body { background: var(--bg); color: var(--text); }
+    .container { width: 90%; max-width: 1200px; margin: 0 auto; }
+    header { background: white; padding: 20px 0; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+    .logo { font-size: 28px; font-weight: 800; color: var(--primary); }
+    .hero { text-align: center; padding: 100px 20px 60px; background: var(--light); }
+    .hero h1 { font-size: 2.8rem; color: var(--primary); margin-bottom: 20px; }
+    .hero p { font-size: 1.2rem; max-width: 800px; margin: 0 auto 40px; line-height: 1.7; }
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
+    }
+    .service-card {
+      background: white;
+      border-radius: 12px;
+      padding: 30px 20px;
+      text-align: center;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+      transition: transform 0.3s;
+    }
+    .service-card:hover { transform: translateY(-8px); }
+    .service-card h3 { color: var(--primary); margin: 15px 0; font-size: 1.4rem; }
+    .service-card p { color: #555; margin-bottom: 20px; }
+    .btn {
+      display: inline-block;
+      padding: 10px 24px;
+      background: var(--primary);
+      color: white;
+      border-radius: 30px;
+      font-weight: 600;
+      text-decoration: none;
+    }
+    footer { text-align: center; padding: 30px 0; color: #666; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container">
+      <div class="logo">GR</div>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <h1>GR Electronics – Your Nyanza Region Partner!</h1>
+      <p>
+        Serving Rongo, Kisii, and Migori with top-quality electronics, fast repairs, fresh cereals, professional TV mounting, and reliable cyber services. 
+        At GR, we bring convenience, technology, and trust to every home and business in the Nyanza Region. Click below to explore our services!
+      </p>
+      <div class="services-grid">
+        <a href="electronics.html" class="service-card">
+          <h3>Selling Electronics</h3>
+          <p>Phones, laptops, TVs & more</p>
+          <span class="btn">View Details</span>
+        </a>
+        <a href="repairs.html" class="service-card">
+          <h3>Repairs</h3>
+          <p>Fast & reliable fixes</p>
+          <span class="btn">View Details</span>
+        </a>
+        <a href="tv-mounting.html" class="service-card">
+          <h3>TV Mounting</h3>
+          <p>Professional installation</p>
+          <span class="btn">View Details</span>
+        </a>
+        <a href="cereals.html" class="service-card">
+          <h3>All Cereals Available</h3>
+          <p>Maize, rice, beans & more</p>
+          <span class="btn">View Details</span>
+        </a>
+        <a href="cyber-services.html" class="service-card">
+          <h3>Online Cyber Services</h3>
+          <p>Printing, browsing, typing</p>
+          <span class="btn">View Details</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 GR Electronics. Proudly serving Nyanza Region, Kenya.</p>
+    </div>
+  </footer>
+
+</body>
+  </html>
