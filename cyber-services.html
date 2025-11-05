@@ -28,7 +28,21 @@
       top: 0;
       z-index: 100;
     }
-    .logo { font-size: 24px; font-weight: 800; color: var(--primary); }
+    .logo {
+      font-size: 24px;
+      font-weight: 800;
+      color: var(--primary);
+      letter-spacing: 2px;
+      display: inline-block;
+      padding: 8px 16px;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      transition: transform 0.2s;
+    }
+    .logo:hover {
+      transform: scale(1.05);
+    }
     .nav-links {
       display: flex;
       gap: 20px;
@@ -140,7 +154,7 @@
 
   <header>
     <div class="container">
-      <div class="logo">GR Market</div>
+      <a href="index.html" class="logo">GR</a>
       <div class="nav-links">
         <a href="index.html">Welcome</a>
         <a href="home.html">Home</a>
@@ -272,6 +286,45 @@
           <h3>Graphic Design (Simple)</h3>
           <p>Posters, flyers, social media graphics — quick turnaround</p>
           <a href="https://wa.me/254710755022?text=Hi%2C%20I%20want%20to%20order%20graphic%20design%20for%20Ksh%20200%2Fdesign" class="order-btn">Order Now →</a>
+        </div>
+      </div>
+
+      <!-- Product 10 -->
+      <div class="product-card">
+        <div class="product-img">
+          <img src="https://via.placeholder.com/300x180/34c759/ffffff?text=Website+Design" alt="Website Design">
+          <div class="price-tag">Ksh 5,000/site</div>
+        </div>
+        <div class="product-info">
+          <h3>Simple Website Design</h3>
+          <p>1-page site for your business — mobile-friendly, fast-loading</p>
+          <a href="https://wa.me/254710755022?text=Hi%2C%20I%20want%20to%20order%20website%20design%20for%20Ksh%205%2C000" class="order-btn">Order Now →</a>
+        </div>
+      </div>
+
+      <!-- Product 11 -->
+      <div class="product-card">
+        <div class="product-img">
+          <img src="https://via.placeholder.com/300x180/ff9e00/ffffff?text=Social+Media" alt="Social Media">
+          <div class="price-tag">Ksh 1,000/month</div>
+        </div>
+        <div class="product-info">
+          <h3>Social Media Management</h3>
+          <p>Posts, stories, ads — we manage your Facebook, Instagram, WhatsApp</p>
+          <a href="https://wa.me/254710755022?text=Hi%2C%20I%20want%20to%20order%20social%20media%20management%20for%20Ksh%201%2C000%2Fmonth" class="order-btn">Order Now →</a>
+        </div>
+      </div>
+
+      <!-- Product 12 -->
+      <div class="product-card">
+        <div class="product-img">
+          <img src="https://via.placeholder.com/300x180/8a2be2/ffffff?text=Data+Entry" alt="Data Entry">
+          <div class="price-tag">Ksh 500/hr</div>
+        </div>
+        <div class="product-info">
+          <h3>Data Entry Services</h3>
+          <p>Excel, Google Sheets, databases — fast, accurate, confidential</p>
+          <a href="https://wa.me/254710755022?text=Hi%2C%20I%20want%20to%20order%20data%20entry%20services%20for%20Ksh%20500%2Fhr" class="order-btn">Order Now →</a>
         </div>
       </div>
 
