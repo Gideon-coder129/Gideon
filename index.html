@@ -3,60 +3,101 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Welcome to GR Market</title>
+  <title>Welcome to GR Enterprises</title>
   <style>
     :root {
       --primary: #4a90e2;
       --accent: #ff6b35;
-      --bg: #ffffff;
-      --text: #222;
+      --text: #ffffff; /* White text for contrast */
+      --shadow: rgba(0,0,0,0.5);
     }
     * { margin:0; padding:0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
     body {
       background: url('welcome-bg.jpg') no-repeat center center fixed;
       background-size: cover;
       color: var(--text);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-      overflow: hidden;
+      line-height: 1.6;
+      overflow-x: hidden;
     }
-    .splash {
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    /* Header Logo */
+    .header-logo {
       text-align: center;
-      padding: 40px 20px;
-      max-width: 600px;
-      background: rgba(255,255,255,0.95);
-      border-radius: 12px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      padding: 30px 0;
     }
     .logo {
-      font-size: 4rem;
+      font-size: 5rem;
       font-weight: 800;
       color: var(--primary);
       letter-spacing: 3px;
-      margin-bottom: 20px;
       animation: pulse 2s infinite;
       display: inline-block;
-      padding: 10px 20px;
-      background: white;
+      padding: 15px 30px;
+      background: rgba(255,255,255,0.1);
       border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 20px var(--shadow);
       transition: transform 0.3s;
-    }
-    .logo:hover {
-      transform: scale(1.05);
     }
     @keyframes pulse {
       0% { transform: scale(1); }
       50% { transform: scale(1.05); }
       100% { transform: scale(1); }
     }
-    .welcome {
-      font-size: 1.5rem;
-      line-height: 1.6;
-      margin-bottom: 30px;
-      color: #444;
+    .logo:hover {
+      transform: scale(1.05);
+    }
+
+    /* Welcome Message */
+    .welcome-section {
+      text-align: center;
+      padding: 40px 20px;
+    }
+    .welcome-title {
+      font-size: 2.5rem;
+      color: var(--primary);
+      margin-bottom: 20px;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    }
+    .welcome-text {
+      font-size: 1.2rem;
+      max-width: 800px;
+      margin: 0 auto 30px;
+      line-height: 1.7;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+    }
+
+    /* Login Form */
+    .login-form {
+      background: rgba(255,255,255,0.1);
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px var(--shadow);
+      max-width: 500px;
+      margin: 30px auto;
+    }
+    .form-group {
+      margin-bottom: 20px;
+    }
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: 600;
+      color: var(--text);
+    }
+    input, textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid rgba(255,255,255,0.3);
+      border-radius: 6px;
+      font-size: 1rem;
+      background: rgba(255,255,255,0.2);
+      color: var(--text);
     }
     .btn {
       display: inline-block;
@@ -72,18 +113,124 @@
       background: #3a7bd5;
       transform: translateY(-2px);
     }
+
+    /* Visit Site Button */
+    .visit-btn {
+      display: block;
+      margin: 40px auto;
+      padding: 15px 40px;
+      background: var(--accent);
+      color: white;
+      border-radius: 30px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.3s;
+    }
+    .visit-btn:hover {
+      background: #ff5722;
+      transform: translateY(-2px);
+    }
+
+    /* Marquee */
+    .marquee-container {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(0,0,0,0.7);
+      color: var(--text);
+      padding: 10px 20px;
+      z-index: 1000;
+      overflow: hidden;
+    }
+    .marquee {
+      white-space: nowrap;
+      animation: marquee 20s linear infinite;
+      font-size: 1.1rem;
+      font-weight: 600;
+    }
+    @keyframes marquee {
+      0% { transform: translateX(100%); }
+      100% { transform: translateX(-100%); }
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 20px;
+      color: var(--text);
+      margin-top: 60px;
+      font-size: 0.9rem;
+    }
   </style>
 </head>
 <body>
 
-  <div class="splash">
+  <!-- Header Logo -->
+  <div class="header-logo">
     <div class="logo">GR</div>
-    <p class="welcome">
-      Welcome to <strong>GR Market</strong> — your trusted partner for everything you need across <strong>Nyanza Region</strong>!
-      From electronics and groceries to TV mounting and cyber services — we deliver quality, speed, and value.
-    </p>
-    <a href="home.html" class="btn">Enter Site →</a>
   </div>
+
+  <!-- Welcome Section -->
+  <div class="welcome-section">
+    <h1 class="welcome-title">Welcome to GR Enterprises</h1>
+    <p class="welcome-text">
+      Your trusted partner for everything you need across <strong>Nyanza Region</strong>!
+      From electronics and groceries to TV mounting and cyber services — we deliver quality, speed, and value.
+      Whether you're a student, job seeker, small business owner, or family looking to upgrade your tech — we’ve got you covered!
+    </p>
+  </div>
+
+  <!-- Login Form -->
+  <div class="login-form">
+    <h2 style="color: var(--primary); margin-bottom: 20px;">Log In (Optional)</h2>
+    <form id="loginForm">
+      <div class="form-group">
+        <label for="email">Email (Optional)</label>
+        <input type="email" id="email" placeholder="Enter your email">
+      </div>
+      <div class="form-group">
+        <label for="phone">Phone Number (Optional)</label>
+        <input type="tel" id="phone" placeholder="+254710755022">
+      </div>
+      <button type="submit" class="btn">Save Info</button>
+    </form>
+  </div>
+
+  <!-- Visit Site Button -->
+  <a href="home.html" class="visit-btn">👉 Visit Site →</a>
+
+  <!-- Marquee -->
+  <div class="marquee-container">
+    <div class="marquee">
+      🎉 GR Enterprises — Serving Kisumu, Rongo, Kisii & Migori with Quality & Speed! 🎉
+      | 
+      💼 Fast Repairs • 📱 Latest Electronics • 🍽️ Fresh Cereals • 🖥️ Cyber Services • 📺 Professional TV Mounting
+      | 
+      📞 Call/WhatsApp: 0710755022 • ✉️ gideonombongi936@gmail.com
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 GR Enterprises. Proudly serving Nyanza Region, Kenya.</p>
+  </footer>
+
+  <script>
+    // Optional: Save login info to localStorage
+    document.getElementById('loginForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const email = document.getElementById('email').value;
+      const phone = document.getElementById('phone').value;
+      if (email || phone) {
+        localStorage.setItem('userEmail', email);
+        localStorage.setItem('userPhone', phone);
+        alert('Info saved! You can now visit the site.');
+      } else {
+        alert('You can skip this step — just click "Visit Site"!');
+      }
+    });
+  </script>
 
 </body>
 </html>
