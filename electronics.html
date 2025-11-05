@@ -14,8 +14,11 @@
     }
     * { margin:0; padding:0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
     body {
+      /* Fallback if image fails */
       background: url('electronics-bg.jpg') no-repeat center center fixed;
       background-size: cover;
+      /* If image fails, show sky blue */
+      background-color: #4a90e2;
       color: var(--text);
       line-height: 1.6;
     }
@@ -346,4 +349,4 @@
   </footer>
 
 </body>
-            </html>
+</html>
