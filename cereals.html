@@ -28,7 +28,21 @@
       top: 0;
       z-index: 100;
     }
-    .logo { font-size: 24px; font-weight: 800; color: var(--primary); }
+    .logo {
+      font-size: 24px;
+      font-weight: 800;
+      color: var(--primary);
+      letter-spacing: 2px;
+      display: inline-block;
+      padding: 8px 16px;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      transition: transform 0.2s;
+    }
+    .logo:hover {
+      transform: scale(1.05);
+    }
     .nav-links {
       display: flex;
       gap: 20px;
@@ -140,7 +154,7 @@
 
   <header>
     <div class="container">
-      <div class="logo">GR Market</div>
+      <a href="index.html" class="logo">GR</a>
       <div class="nav-links">
         <a href="index.html">Welcome</a>
         <a href="home.html">Home</a>
@@ -275,6 +289,45 @@
         </div>
       </div>
 
+      <!-- Product 10 -->
+      <div class="product-card">
+        <div class="product-img">
+          <img src="https://via.placeholder.com/300x180/a0522d/ffffff?text=Ugali+Flour" alt="Ugali Flour">
+          <div class="price-tag">Ksh 1,000/5kg</div>
+        </div>
+        <div class="product-info">
+          <h3>Ugali Flour (5kg)</h3>
+          <p>Finely milled, smooth texture — perfect for ugali</p>
+          <a href="https://wa.me/254710755022?text=Hi%2C%20I%20want%20to%20order%205kg%20Ugali%20Flour%20for%20Ksh%201%2C000" class="order-btn">Order Now →</a>
+        </div>
+      </div>
+
+      <!-- Product 11 -->
+      <div class="product-card">
+        <div class="product-img">
+          <img src="https://via.placeholder.com/300x180/34c759/ffffff?text=Tea+Leaves" alt="Tea Leaves">
+          <div class="price-tag">Ksh 3,500/2kg</div>
+        </div>
+        <div class="product-info">
+          <h3>Tea Leaves (2kg)</h3>
+          <p>Kenyan black tea, rich aroma, perfect for brewing</p>
+          <a href="https://wa.me/254710755022?text=Hi%2C%20I%20want%20to%20order%202kg%20Tea%20Leaves%20for%20Ksh%203%2C500" class="order-btn">Order Now →</a>
+        </div>
+      </div>
+
+      <!-- Product 12 -->
+      <div class="product-card">
+        <div class="product-img">
+          <img src="https://via.placeholder.com/300x180/ff9e00/ffffff?text=Spices+Pack" alt="Spices Pack">
+          <div class="price-tag">Ksh 500/pack</div>
+        </div>
+        <div class="product-info">
+          <h3>Spices Pack</h3>
+          <p>Curry, cumin, coriander, cardamom — all in one pack</p>
+          <a href="https://wa.me/254710755022?text=Hi%2C%20I%20want%20to%20order%20Spices%20Pack%20for%20Ksh%20500" class="order-btn">Order Now →</a>
+        </div>
+      </div>
+
     </div>
 
     <div class="contact-box">
@@ -293,4 +346,4 @@
   </footer>
 
 </body>
-                              </html>
+</html>
