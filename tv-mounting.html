@@ -28,7 +28,21 @@
       top: 0;
       z-index: 100;
     }
-    .logo { font-size: 24px; font-weight: 800; color: var(--primary); }
+    .logo {
+      font-size: 24px;
+      font-weight: 800;
+      color: var(--primary);
+      letter-spacing: 2px;
+      display: inline-block;
+      padding: 8px 16px;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      transition: transform 0.2s;
+    }
+    .logo:hover {
+      transform: scale(1.05);
+    }
     .nav-links {
       display: flex;
       gap: 20px;
@@ -140,7 +154,7 @@
 
   <header>
     <div class="container">
-      <div class="logo">GR Market</div>
+      <a href="index.html" class="logo">GR</a>
       <div class="nav-links">
         <a href="index.html">Welcome</a>
         <a href="home.html">Home</a>
@@ -174,7 +188,7 @@
       <!-- Product 2 -->
       <div class="product-card">
         <div class="product-img">
-          <img src="https://via.placeholder.com/300x180/8a2be2/ffffff?text=Full+Motion" alt="Full Motion">
+          <img src="https://via.placeholder.com/300x180/8a2be2/ffffff?text=Full+Motion" alt="Full Motion Mount">
           <div class="price-tag">Ksh 2,500</div>
         </div>
         <div class="product-info">
@@ -272,6 +286,45 @@
           <h3>Universal Remote Setup</h3>
           <p>Program your remote to control TV, soundbar, and more</p>
           <a href="https://wa.me/254710755022?text=Hi%2C%20I%20want%20to%20order%20remote%20setup%20for%20Ksh%20300" class="order-btn">Order Now →</a>
+        </div>
+      </div>
+
+      <!-- Product 10 -->
+      <div class="product-card">
+        <div class="product-img">
+          <img src="https://via.placeholder.com/300x180/4a90e2/ffffff?text=Soundbar+Mount" alt="Soundbar Mount">
+          <div class="price-tag">Ksh 1,200</div>
+        </div>
+        <div class="product-info">
+          <h3>Soundbar Mount</h3>
+          <p>Mount your soundbar below the TV for immersive audio</p>
+          <a href="https://wa.me/254710755022?text=Hi%2C%20I%20want%20to%20order%20soundbar%20mount%20for%20Ksh%201%2C200" class="order-btn">Order Now →</a>
+        </div>
+      </div>
+
+      <!-- Product 11 -->
+      <div class="product-card">
+        <div class="product-img">
+          <img src="https://via.placeholder.com/300x180/34c759/ffffff?text=Projector+Mount" alt="Projector Mount">
+          <div class="price-tag">Ksh 2,000</div>
+        </div>
+        <div class="product-info">
+          <h3>Projector Mount</h3>
+          <p>Secure ceiling or wall mount for projectors — perfect for classrooms</p>
+          <a href="https://wa.me/254710755022?text=Hi%2C%20I%20want%20to%20order%20projector%20mount%20for%20Ksh%202%2C000" class="order-btn">Order Now →</a>
+        </div>
+      </div>
+
+      <!-- Product 12 -->
+      <div class="product-card">
+        <div class="product-img">
+          <img src="https://via.placeholder.com/300x180/ff9e00/ffffff?text=TV+Cleaning" alt="TV Cleaning">
+          <div class="price-tag">Ksh 500</div>
+        </div>
+        <div class="product-info">
+          <h3>TV Cleaning & Maintenance</h3>
+          <p>Deep clean your TV screen and vents — improves performance and lifespan</p>
+          <a href="https://wa.me/254710755022?text=Hi%2C%20I%20want%20to%20order%20TV%20cleaning%20for%20Ksh%20500" class="order-btn">Order Now →</a>
         </div>
       </div>
 
