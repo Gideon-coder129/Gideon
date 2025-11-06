@@ -191,31 +191,38 @@
     </div>
 
     <div class="section feedback-section">
-      <h2 class="section-title">Rate Our Services & Leave Feedback</h2>
-      <div class="feedback-form">
-        <form id="feedbackForm">
-          <div class="form-group">
-            <label for="feedbackName">Your Name</label>
-            <input type="text" id="feedbackName" placeholder="Enter your name" required>
-          </div>
-          <div class="form-group">
-            <label for="feedbackRating">Rate Us (1-5 Stars)</label>
-            <select id="feedbackRating" required>
-              <option value="">Select Rating</option>
-              <option value="1">⭐ Poor</option>
-              <option value="2">⭐⭐ Below Average</option>
-              <option value="3">⭐⭐⭐ Average</option>
-              <option value="4">⭐⭐⭐⭐ Good</option>
-              <option value="5">⭐⭐⭐⭐⭐ Excellent</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="feedbackComment">Your Feedback</label>
-            <textarea id="feedbackComment" rows="4" placeholder="Tell us what you think... 😊"></textarea>
-          </div>
-          <button type="submit" class="btn">Submit Feedback</button>
-        </form>
-      </div>
+  <h2 class="section-title">Share Your Story 😊</h2>
+  <p>Have a great experience? Share your story — we read every message!</p>
+  
+  <form action="https://formspree.io/f/YOUR-FORM-ID" method="POST">
+    <div class="form-group">
+      <label for="name">Your Name</label>
+      <input type="text" name="name" placeholder="e.g., John from Rongo" required>
+    </div>
+    <div class="form-group">
+      <label for="service">Service Used</label>
+      <input type="text" name="service" placeholder="e.g., KRA PIN Registration">
+    </div>
+    <div class="form-group">
+      <label for="rating">Rating (1-5)</label>
+      <select name="rating" required>
+        <option value="5">⭐⭐⭐⭐⭐ Excellent</option>
+        <option value="4">⭐⭐⭐⭐ Good</option>
+        <option value="3">⭐⭐⭐ Average</option>
+        <option value="2">⭐⭐ Below Average</option>
+        <option value="1">⭐ Poor</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="story">Your Story (Add photo link if you have one)</label>
+      <textarea name="story" rows="4" placeholder="Tell us what happened! 😊"></textarea>
+    </div>
+    <button type="submit" class="btn">Send to GR Team</button>
+  </form>
+  <p style="font-size:0.9rem; margin-top:10px; color:#666;">
+    ✨ Approved stories will appear on our homepage!
+  </p>
+    </div>
 
       <div class="feedback-comments">
         <h3>Customer Comments 😊</h3>
