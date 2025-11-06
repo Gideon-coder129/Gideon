@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pool Tables & Spares | GR Enterprises</title>
+  <style>
+    :root {
+      --primary: #4a90e2;
+      --bg: #ffffff;
+      --text: #222;
+      --light: #f8fbff;
+      --shadow: rgba(0,0,0,0.08);
+    }
+    * { margin:0; padding:0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+    body {
+      background: url('welcome-bg.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: var(--text);
+      line-height: 1.6;
+    }
+    .container { width: 90%; max-width: 1200px; margin: 0 auto; padding: 20px; }
+    header {
+      background: white;
+      padding: 15px 0;
+      box-shadow: 0 2px 8px var(--shadow);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .logo {
+      font-size: 24px;
+      font-weight: 800;
+      color: var(--primary);
+      letter-spacing: 2px;
+      display: inline-block;
+      padding: 8px 16px;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      transition: transform 0.2s;
+    }
+    .logo:hover {
+      transform: scale(1.05);
+    }
+    .nav-links {
+      display: flex;
+      gap: 20px;
+      margin-left: 20px;
+    }
+    .nav-links a {
+      color: var(--primary);
+      font-weight: 600;
+      padding: 6px 12px;
+      border-radius: 4px;
+      transition: background 0.2s;
+    }
+    .nav-links a:hover { background: #f0f8ff; }
+
+    .section-title {
+      text-align: center;
+      font-size: 2.2rem;
+      color: var(--primary);
+      margin: 60px 0 30px;
+    }
+
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+      margin: 30px 0;
+    }
+
+    .product-card {
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 15px var(--shadow);
+      transition: transform 0.3s;
+    }
+    .product-card:hover { transform: translateY(-8px); }
+
+    .product-img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      position: relative;
+    }
+    .price-tag {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: #ff6b35;
+      color: white;
+      padding: 5px 12px;
+      border-radius: 4px;
+      font-weight: 600;
+      font-size: 0.9rem;
+    }
+
+    .product-info {
+      padding: 20px;
+    }
+    .product-info h3 {
+      color: var(--primary);
+      margin-bottom: 10px;
+      font-size: 1.2rem;
+    }
+    .product-info p {
+      color: #666;
+      margin-bottom: 15px;
+      font-size: 0.95rem;
+    }
+
+    .order-btn {
+      display: inline-block;
+      width: 100%;
+      padding: 10px;
+      background: var(--primary);
+      color: white;
+      text-align: center;
+      border-radius: 6px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+    .order-btn:hover {
+      background: #3a7bd5;
+    }
+
+    .contact-box {
+      background: rgba(255,255,255,0.95);
+      padding: 30px;
+      border-radius: 12px;
+      margin: 50px 0;
+      text-align: center;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+    .contact-box h2 { color: var(--primary); margin-bottom: 15px; }
+    .contact-box p {
+      margin: 8px 0;
+      font-size: 1.05rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px 0;
+      color: #666;
+      margin-top: 60px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container">
+      <a href="index.html" class="logo">GR</a>
+      <div class="nav-links">
+        <a href="index.html">Welcome</a>
+        <a href="home.html">Home</a>
+        <a href="order.html">Order Form</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+
+    <h1 class="section-title">Pool Tables & Spares</h1>
+    <p style="text-align:center; max-width:800px; margin:0 auto 30px;">
+      Upgrade your game room with high-quality pool tables and accessories — all from GR Enterprises!
+    </p>
+
+    <div class="products-grid">
+
+      <!-- Product 1 -->
+      <div class="product-card">
+        <div class="product-img">
+          <img src="https://via.placeholder.com/300x180/ff6b35/ffffff?text=New+Pool+Table" alt="New Pool Table">
+          <div class="price-tag">Ksh 70,000+</div>
+        </div>
+        <div class="product-info">
+          <h3>New Pool Table</h3>
+          <p>Premium quality, scratch-resistant cloth, solid wood frame — perfect for home or business.</p>
+          <a href="https://wa.me/254710755022?text=Hi%2C%20I%20want%20to%20order%20a%20new%20pool%20table%20for%20Ksh%2070%2C000%2B" class="order-btn">Order Now →</a>
+        </div>
+      </div>
+
+      <!-- Product 2 -->
+      <div class="product-card">
+        <div class="product-img">
+          <img src="https://via.placeholder.com/300x180/34c759/ffffff?text=Used+Table" alt="Second-hand Pool Table">
+          <div class="price-tag">Ksh 15,000+</div>
+        </div>
+        <div class="product-info">
+          <h3>Second-hand Pool Table</h3>
+          <p>Well-maintained, tested, affordable — great for first-time buyers or budget setups.</p>
+          <a href="https://wa.me/254710755022?text=Hi%2C%20I%20want%20to%20order%20a%20second-hand%20pool%20table%20for%20Ksh%2015%2C000%2B" class="order-btn">Order Now →</a>
+        </div>
+      </div>
+
+      <!-- Product 3 -->
+      <div class="product-card">
+        <div class="product-img">
+          <img src="https://via.placeholder.com/300x180/ff9e00/ffffff?text=Pool+Cues" alt="Pool Cues">
+          <div class="price-tag">Ksh 500+</div>
+        </div>
+        <div class="product-info">
+          <h3>Pool Cues</h3>
+          <p>Wooden & carbon fiber cues — durable, smooth finish, professional feel.</p>
+          <a href="https://wa.me/254710755022?text=Hi%2C%20I%20want%20to%20order%20a%20pool%20cue%20from%20Ksh%20500" class="order-btn">Order Now →</a>
+        </div>
+      </div>
+
+      <!-- Product 4 -->
+      <div class="product-card">
+        <div class="product-img">
+          <img src="https://via.placeholder.com/300x180/8a2be2/ffffff?text=Pool+Balls" alt="Pool Balls">
+          <div class="price-tag">Ksh 300+</div>
+        </div>
+        <div class="product-info">
+          <h3>Pool Ball Sets</h3>
+          <p>Standard 15-ball sets + cue ball — colorful, durable, perfect for any table.</p>
+          <a href="https://wa.me/254710755022?text=Hi%2C%20I%20want%20to%20order%20a%20pool%20ball%20set%20from%20Ksh%20300" class="order-btn">Order Now →</a>
+        </div>
+      </div>
+
+      <!-- Product 5 -->
+      <div class="product-card">
+        <div class="product-img">
+          <img src="https://via.placeholder.com/300x180/4a90e2/ffffff?text=Billiard+Chalk" alt="Billiard Chalk">
+          <div class="price-tag">Ksh 50</div>
+        </div>
+        <div class="product-info">
+          <h3>Billiard Chalk</h3>
+          <p>High-grip chalk for better cue control — long-lasting and easy to apply.</p>
+          <a href="https://wa.me/254710755022?text=Hi%2C%20I%20want%20to%20order%20billiard%20chalk%20for%20Ksh%2050" class="order-btn">Order Now →</a>
+        </div>
+      </div>
+
+      <!-- Product 6 -->
+      <div class="product-card">
+        <div class="product-img">
+          <img src="https://via.placeholder.com/300x180/34c759/ffffff?text=Triangle+Rack" alt="Triangle Rack">
+          <div class="price-tag">Ksh 400</div>
+        </div>
+        <div class="product-info">
+          <h3>Triangle Racks</h3>
+          <p>Durable plastic or wooden racks — keeps your balls perfectly aligned.</p>
+          <a href="https://wa.me/254710755022?text=Hi%2C%20I%20want%20to%20order%20a%20triangle%20rack%20for%20Ksh%20400" class="order-btn">Order Now →</a>
+        </div>
+      </div>
+
+      <!-- Product 7 -->
+      <div class="product-card">
+        <div class="product-img">
+          <img src="https://via.placeholder.com/300x180/ff9e00/ffffff?text=Table+Cloth" alt="Table Cloth">
+          <div class="price-tag">Ksh 2,000</div>
+        </div>
+        <div class="product-info">
+          <h3>Pool Table Cloth</h3>
+          <p>Green felt cloth — anti-slip, durable, fast roll — fits standard tables.</p>
+          <a href="https://wa.me/254710755022?text=Hi%2C%20I%20want%20to%20order%20pool%20table%20cloth%20for%20Ksh%202%2C000" class="order-btn">Order Now →</a>
+        </div>
+      </div>
+
+      <!-- Product 8 -->
+      <div class="product-card">
+        <div class="product-img">
+          <img src="https://via.placeholder.com/300x180/8a2be2/ffffff?text=Cover+Bag" alt="Cover Bag">
+          <div class="price-tag">Ksh 1,500</div>
+        </div>
+        <div class="product-info">
+          <h3>Table Cover Bag</h3>
+          <p>Protect your table from dust, moisture, and damage when not in use.</p>
+          <a href="https://wa.me/254710755022?text=Hi%2C%20I%20want%20to%20order%20a%20table%20cover%20bag%20for%20Ksh%201%2C500" class="order-btn">Order Now →</a>
+        </div>
+      </div>
+
+      <!-- Product 9 -->
+      <div class="product-card">
+        <div class="product-img">
+          <img src="https://via.placeholder.com/300x180/4a90e2/ffffff?text=Installation" alt="Installation">
+          <div class="price-tag">Ksh 3,000</div>
+        </div>
+        <div class="product-info">
+          <h3>Installation & Setup</h3>
+          <p>We deliver, assemble, level, and set up your new or used pool table.</p>
+          <a href="https://wa.me/254710755022?text=Hi%2C%20I%20need%20pool%20table%20installation%20for%20Ksh%203%2C000" class="order-btn">Book Now →</a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="contact-box">
+      <h2>Contact Us for Pool Tables</h2>
+      <p><strong>Email:</strong> gideonombongi936@gmail.com</p>
+      <p><strong>Phone/WhatsApp:</strong> 0710755022</p>
+      <p><strong>Serving:</strong> All of Nyanza Region — Kisumu, Rongo, Kisii, Migori</p>
+    </div>
+
+  </div>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 GR Enterprises. Proudly serving Nyanza Region, Kenya.</p>
+    </div>
+  </footer>
+
+</body>
+        </html>
