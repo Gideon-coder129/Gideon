@@ -85,6 +85,10 @@
     }
     .contact-card h3 { color: var(--primary); margin-bottom: 10px; }
     .contact-card p { margin: 5px 0; font-size: 1.1rem; }
+    .contact-icon {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
 
     .location {
       text-align: center;
@@ -168,12 +172,14 @@
       <h2 class="section-title">Contact Us</h2>
       <div class="contact-info">
         <div class="contact-card">
+          <div class="contact-icon">📞</div> <!-- Call Icon -->
           <h3>Helpline</h3>
-          <p>+254738613970</p>
+          <p><a href="tel:+254738613970">+254738613970</a></p>
         </div>
         <div class="contact-card">
-          <h3>General Enquiries</h3>
-          <p>+254710755022</p>
+          <div class="contact-icon">💬</div> <!-- WhatsApp Icon -->
+          <h3>Contact Us</h3>
+          <p><a href="https://wa.me/254710755022">+254710755022</a></p>
         </div>
       </div>
     </div>
@@ -191,38 +197,31 @@
     </div>
 
     <div class="section feedback-section">
-  <h2 class="section-title">Share Your Story 😊</h2>
-  <p>Have a great experience? Share your story — we read every message!</p>
-  
-  <form action="https://formspree.io/f/YOUR-FORM-ID" method="POST">
-    <div class="form-group">
-      <label for="name">Your Name</label>
-      <input type="text" name="name" placeholder="e.g., John from Rongo" required>
-    </div>
-    <div class="form-group">
-      <label for="service">Service Used</label>
-      <input type="text" name="service" placeholder="e.g., KRA PIN Registration">
-    </div>
-    <div class="form-group">
-      <label for="rating">Rating (1-5)</label>
-      <select name="rating" required>
-        <option value="5">⭐⭐⭐⭐⭐ Excellent</option>
-        <option value="4">⭐⭐⭐⭐ Good</option>
-        <option value="3">⭐⭐⭐ Average</option>
-        <option value="2">⭐⭐ Below Average</option>
-        <option value="1">⭐ Poor</option>
-      </select>
-    </div>
-    <div class="form-group">
-      <label for="story">Your Story (Add photo link if you have one)</label>
-      <textarea name="story" rows="4" placeholder="Tell us what happened! 😊"></textarea>
-    </div>
-    <button type="submit" class="btn">Send to GR Team</button>
-  </form>
-  <p style="font-size:0.9rem; margin-top:10px; color:#666;">
-    ✨ Approved stories will appear on our homepage!
-  </p>
-    </div>
+      <h2 class="section-title">Comment Section 😊</h2>
+      <p>Share your experience with GR Enterprises — we read every message!</p>
+
+      <form id="feedbackForm">
+        <div class="form-group">
+          <label for="feedbackName">Your Name</label>
+          <input type="text" id="feedbackName" placeholder="Enter your name" required>
+        </div>
+        <div class="form-group">
+          <label for="feedbackRating">Rate Us (1-5 Stars)</label>
+          <select id="feedbackRating" required>
+            <option value="">Select Rating</option>
+            <option value="1">⭐ Poor</option>
+            <option value="2">⭐⭐ Below Average</option>
+            <option value="3">⭐⭐⭐ Average</option>
+            <option value="4">⭐⭐⭐⭐ Good</option>
+            <option value="5">⭐⭐⭐⭐⭐ Excellent</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="feedbackComment">Your Comment</label>
+          <textarea id="feedbackComment" rows="4" placeholder="Tell us what happened... 😊"></textarea>
+        </div>
+        <button type="submit" class="btn">Submit Comment</button>
+      </form>
 
       <div class="feedback-comments">
         <h3>Customer Comments 😊</h3>
@@ -235,7 +234,7 @@
     <div class="social-links">
       <h2 class="section-title">Connect With Us</h2>
       <a href="https://tiktok.com/@grenterprises" target="_blank">🎵 TikTok</a>
-      <a href="https://twitter.com/grenterprises" target="_blank">🐦 Twitter/X</a>
+      <a href="https://x.com/grenterprises" target="_blank">🐦 X (Twitter)</a> <!-- Changed from Twitter to X -->
       <a href="https://facebook.com/grenterprises" target="_blank">📘 Facebook</a>
       <a href="https://instagram.com/grenterprises" target="_blank">📸 Instagram</a>
     </div>
@@ -283,7 +282,7 @@
       comments.push(newComment);
       localStorage.setItem('feedbackComments', JSON.stringify(comments));
 
-      alert('Thank you for your feedback! 😊');
+      alert('Thank you for your comment! 😊');
       document.getElementById('feedbackForm').reset();
       loadComments(); // Reload comments
     });
