@@ -1,17 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta name="description" content="GR Enterprises - Your trusted provider of electronics, repairs, cereals, TV mounting & cyber services in Nyanza Region (Kisumu, Rongo, Kisii, Migori). Fast, affordable, and reliable.">
-<meta name="keywords" content="GR Enterprises, electronics shop, phone repair, cereals, TV mounting, cyber services, Nyanza, Kisumu, Rongo, Kisii, Migori, Kenya">
-<meta name="author" content="GR Enterprises">
-<meta property="og:title" content="GR Enterprises | Electronics, Repairs, Cereals, Cyber Services in Nyanza">
-<meta property="og:description" content="Selling electronics, fixing phones, supplying cereals, TV mounting & cyber services across Nyanza Region. Visit today!">
-<meta property="og:image" content="https://gideon-coder129.github.io/welcome-bg.jpg">
-<meta property="og:url" content="https://gideon-coder129.github.io">
-<meta name="robots" content="index, follow">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Place an Order | GR Market</title>
+  <title>Place an Order | GR Enterprises</title>
   <style>
     :root {
       --primary: #4a90e2;
@@ -64,6 +56,7 @@
     }
     .btn:hover {
       background: #3a7bd5;
+      transform: translateY(-2px);
     }
     footer {
       text-align: center;
@@ -77,7 +70,7 @@
 
   <header>
     <div class="container">
-      <a href="index.html" class="logo">GR Market</a>
+      <a href="index.html" class="logo">GR</a>
     </div>
   </header>
 
@@ -86,7 +79,7 @@
     <h1>Place an Order</h1>
     <p>Fill out this form and we’ll get back to you within 1 hour via WhatsApp or phone!</p>
 
-      <form action="https://formspree.io/f/your-form-id" method="POST">
+    <form id="orderForm">
       <div class="form-group">
         <label for="name">Your Full Name</label>
         <input type="text" id="name" required>
@@ -94,6 +87,10 @@
       <div class="form-group">
         <label for="phone">Phone Number (WhatsApp)</label>
         <input type="tel" id="phone" placeholder="+254710755022" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email (Optional)</label>
+        <input type="email" id="email" placeholder="your-email@example.com">
       </div>
       <div class="form-group">
         <label for="product">Product/Service You Want</label>
@@ -104,22 +101,34 @@
         <input type="number" id="quantity" min="1" value="1">
       </div>
       <div class="form-group">
-        <label for="message">Special Instructions</label>
-        <textarea id="message" rows="4"></textarea>
+        <label for="message">Special Instructions (e.g., Negotiated Price)</label>
+        <textarea id="message" rows="4" placeholder="Any special requests or price negotiations..."></textarea>
       </div>
       <button type="submit" class="btn">Send Order Request</button>
     </form>
 
     <script>
+      // Pre-fill order form fields if user info exists
+      window.addEventListener('load', function() {
+        const fullName = localStorage.getItem('userFullName');
+        const email = localStorage.getItem('userEmail');
+        const phone = localStorage.getItem('userPhone');
+        
+        if (fullName) document.getElementById('name').value = fullName;
+        if (email) document.getElementById('email').value = email;
+        if (phone) document.getElementById('phone').value = phone;
+      });
+
       document.getElementById('orderForm').addEventListener('submit', function(e) {
         e.preventDefault();
         const name = document.getElementById('name').value;
         const phone = document.getElementById('phone').value.replace(/\D/g, '');
+        const email = document.getElementById('email').value;
         const product = document.getElementById('product').value;
         const quantity = document.getElementById('quantity').value;
         const message = document.getElementById('message').value;
 
-        const waMessage = `Hi GR Market,\n\nI'm ${name}.\nI want to order:\n${product} x ${quantity}\n\nSpecial instructions: ${message}\n\nCall/WhatsApp me at: ${phone}`;
+        const waMessage = `Hi GR Enterprises,\n\nI'm ${name}.\nI want to order:\n${product} x ${quantity}\n\nNegotiated Instructions: ${message}\n\nMy Email: ${email}\n\nCall/WhatsApp me at: ${phone}`;
         
         window.open(`https://wa.me/${phone}?text=${encodeURIComponent(waMessage)}`, '_blank');
       });
@@ -129,7 +138,7 @@
 
   <footer>
     <div class="container">
-      <p>&copy; 2025 GR Market. Serving all of Nyanza Region.</p>
+      <p>&copy; 2025 GR Enterprises. Serving all of Nyanza Region.</p>
     </div>
   </footer>
 
