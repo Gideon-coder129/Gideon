@@ -169,6 +169,59 @@
       From electronics and groceries to TV mounting and cyber services — we deliver quality, speed, and value.
       Whether you're a student, job seeker, small business owner, or family looking to upgrade your tech — we’ve got you covered!
     </p>
+    <!-- Approved Customer Stories -->
+<div class="container" style="margin: 40px auto; max-width:800px;">
+  <h2 style="text-align:center; color:#4a90e2; margin-bottom:20px;">🌟 Customer Stories</h2>
+  <div id="testimonialSlider" style="background:rgba(255,255,255,0.9); padding:20px; border-radius:12px; text-align:center; box-shadow:0 4px 15px rgba(0,0,0,0.1);">
+    <!-- Testimonials will rotate here -->
+    <blockquote id="testimonialText">
+      “GR Enterprises saved my business with KRA eTIMS registration — fast and affordable!”
+    </blockquote>
+    <p id="testimonialAuthor" style="margin-top:10px; font-weight:600; color:#4a90e2;">
+      – Jane, Rongo
+    </p>
+  </div>
+
+  <div style="text-align:center; margin-top:20px; display:none;" id="noTestimonials">
+    <p>No stories yet. Be the first to share!</p>
+  </div>
+</div>
+
+<script>
+  // Add your approved testimonials here
+  const testimonials = [
+    {
+      text: "GR Enterprises saved my business with KRA eTIMS registration — fast and affordable!",
+      author: "Jane, Rongo"
+    },
+    {
+      text: "Got my HELB loan application done in 1 hour! These guys are magic! 😂",
+      author: "Mark, Kisii"
+    },
+    {
+      text: "TV mounted perfectly over my bed — no more neck pain! 10/10!",
+      author: "Lucy, Migori"
+    }
+  ];
+
+  let current = 0;
+  const testimonialText = document.getElementById('testimonialText');
+  const testimonialAuthor = document.getElementById('testimonialAuthor');
+
+  function showTestimonial() {
+    if (testimonials.length === 0) {
+      document.getElementById('testimonialSlider').style.display = 'none';
+      document.getElementById('noTestimonials').style.display = 'block';
+      return;
+    }
+    testimonialText.textContent = `"${testimonials[current].text}"`;
+    testimonialAuthor.textContent = `– ${testimonials[current].author}`;
+    current = (current + 1) % testimonials.length;
+  }
+
+  showTestimonial();
+  setInterval(showTestimonial, 5000); // Change every 5 seconds
+</script>
     <p class="negotiable">💡 All prices are negotiable — feel free to tag the price of your pocket when making orders!</p>
   </div>
 
