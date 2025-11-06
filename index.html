@@ -1,15 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta name="google-site-verification" content="FWa-8cOan_nN-2xmmM0jUMEc8bOMKHr5yo_WbctXUMY" />
-  <meta name="description" content="GR Enterprises - Your trusted provider of electronics, repairs, cereals, TV mounting & cyber services in Nyanza Region (Kisumu, Rongo, Kisii, Migori). Fast, affordable, and reliable.">
-<meta name="keywords" content="GR Enterprises, electronics shop, phone repair, cereals, TV mounting, cyber services, Nyanza, Kisumu, Rongo, Kisii, Migori, Kenya">
-<meta name="author" content="GR Enterprises">
-<meta property="og:title" content="GR Enterprises | Electronics, Repairs, Cereals, Cyber Services in Nyanza">
-<meta property="og:description" content="Selling electronics, fixing phones, supplying cereals, TV mounting & cyber services across Nyanza Region. Visit today!">
-<meta property="og:image" content="https://gideon-coder129.github.io/welcome-bg.jpg">
-<meta property="og:url" content="https://gideon-coder129.github.io">
-<meta name="robots" content="index, follow">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Welcome to GR Enterprises</title>
@@ -17,7 +8,7 @@
     :root {
       --primary: #4a90e2;
       --accent: #ff6b35;
-      --text: #ffffff; /* White text for contrast */
+      --text: #ffffff;
       --shadow: rgba(0,0,0,0.5);
     }
     * { margin:0; padding:0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
@@ -78,6 +69,13 @@
       max-width: 800px;
       margin: 0 auto 30px;
       line-height: 1.7;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+    }
+    .negotiable {
+      font-size: 1.1rem;
+      color: var(--accent);
+      font-weight: 600;
+      margin: 20px 0;
       text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
     }
 
@@ -188,6 +186,7 @@
       From electronics and groceries to TV mounting and cyber services — we deliver quality, speed, and value.
       Whether you're a student, job seeker, small business owner, or family looking to upgrade your tech — we’ve got you covered!
     </p>
+    <p class="negotiable">💡 All prices are negotiable — feel free to tag the price of your pocket when making orders!</p>
   </div>
 
   <!-- Login Form -->
@@ -195,11 +194,15 @@
     <h2 style="color: var(--primary); margin-bottom: 20px;">Log In (Optional)</h2>
     <form id="loginForm">
       <div class="form-group">
-        <label for="email">Email (Optional)</label>
+        <label for="fullName">Full Name</label>
+        <input type="text" id="fullName" placeholder="Enter your full name">
+      </div>
+      <div class="form-group">
+        <label for="email">Email Address</label>
         <input type="email" id="email" placeholder="Enter your email">
       </div>
       <div class="form-group">
-        <label for="phone">Phone Number (Optional)</label>
+        <label for="phone">Phone Number</label>
         <input type="tel" id="phone" placeholder="+254710755022">
       </div>
       <button type="submit" class="btn">Save Info</button>
@@ -226,18 +229,32 @@
   </footer>
 
   <script>
-    // Optional: Save login info to localStorage
+    // Save login info to localStorage
     document.getElementById('loginForm').addEventListener('submit', function(e) {
       e.preventDefault();
+      const fullName = document.getElementById('fullName').value;
       const email = document.getElementById('email').value;
       const phone = document.getElementById('phone').value;
-      if (email || phone) {
+      
+      if (fullName || email || phone) {
+        localStorage.setItem('userFullName', fullName);
         localStorage.setItem('userEmail', email);
         localStorage.setItem('userPhone', phone);
-        alert('Info saved! You can now visit the site.');
+        alert('Info saved! Your details will auto-fill in the order form.');
       } else {
         alert('You can skip this step — just click "Visit Site"!');
       }
+    });
+
+    // Pre-fill order form fields if user info exists
+    window.addEventListener('load', function() {
+      const fullName = localStorage.getItem('userFullName');
+      const email = localStorage.getItem('userEmail');
+      const phone = localStorage.getItem('userPhone');
+      
+      if (fullName) document.getElementById('name')?.value = fullName;
+      if (email) document.getElementById('email')?.value = email;
+      if (phone) document.getElementById('phone')?.value = phone;
     });
   </script>
 
