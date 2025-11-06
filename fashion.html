@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Fashion & Style | GR Enterprises</title>
+  <style>
+    :root {
+      --primary: #4a90e2;
+      --bg: #ffffff;
+      --text: #222;
+      --light: #f8fbff;
+      --shadow: rgba(0,0,0,0.08);
+    }
+    * { margin:0; padding:0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+    body {
+      background: url('welcome-bg.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: var(--text);
+      line-height: 1.6;
+    }
+    .container { width: 90%; max-width: 1200px; margin: 0 auto; padding: 20px; }
+    header {
+      background: white;
+      padding: 15px 0;
+      box-shadow: 0 2px 8px var(--shadow);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .logo {
+      font-size: 24px;
+      font-weight: 800;
+      color: var(--primary);
+      letter-spacing: 2px;
+      display: inline-block;
+      padding: 8px 16px;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      transition: transform 0.2s;
+    }
+    .logo:hover {
+      transform: scale(1.05);
+    }
+    .nav-links {
+      display: flex;
+      gap: 20px;
+      margin-left: 20px;
+    }
+    .nav-links a {
+      color: var(--primary);
+      font-weight: 600;
+      padding: 6px 12px;
+      border-radius: 4px;
+      transition: background 0.2s;
+    }
+    .nav-links a:hover { background: #f0f8ff; }
+
+    .section-title {
+      text-align: center;
+      font-size: 2.2rem;
+      color: var(--primary);
+      margin: 60px 0 30px;
+    }
+
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+      margin: 30px 0;
+    }
+
+    .product-card {
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 15px var(--shadow);
+      transition: transform 0.3s;
+    }
+    .product-card:hover { transform: translateY(-8px); }
+
+    .product-img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      position: relative;
+    }
+    .price-tag {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: #ff6b35;
+      color: white;
+      padding: 5px 12px;
+      border-radius: 4px;
+      font-weight: 600;
+      font-size: 0.9rem;
+    }
+
+    .product-info {
+      padding: 20px;
+    }
+    .product-info h3 {
+      color: var(--primary);
+      margin-bottom: 10px;
+      font-size: 1.2rem;
+    }
+    .product-info p {
+      color: #666;
+      margin-bottom: 15px;
+      font-size: 0.95rem;
+    }
+
+    .order-btn {
+      display: inline-block;
+      width: 100%;
+      padding: 10px;
+      background: var(--primary);
+      color: white;
+      text-align: center;
+      border-radius: 6px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+    .order-btn:hover {
+      background: #3a7bd5;
+    }
+
+    .contact-box {
+      background: rgba(255,255,255,0.95);
+      padding: 30px;
+      border-radius: 12px;
+      margin: 50px 0;
+      text-align: center;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+    .contact-box h2 { color: var(--primary); margin-bottom: 15px; }
+    .contact-box p {
+      margin: 8px 0;
+      font-size: 1.05rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px 0;
+      color: #666;
+      margin-top: 60px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container">
+      <a href="index.html" class="logo">GR</a>
+      <div class="nav-links">
+        <a href="index.html">Welcome</a>
+        <a href="home.html">Home</a>
+        <a href="order.html">Order Form</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+
+    <h1 class="section-title">Fashion & Style</h1>
+    <p style="text-align:center; max-width:800px; margin:0 auto 30px;">
+      Upgrade your wardrobe with our curated collection of ready-made clothes, fabrics, and accessories — all from GR Enterprises!
+    </p>
+
+    <div class="products-grid">
+
+      <!-- Product 1 -->
+      <div class="product-card">
+        <div class="product-img">
+          <img src="https://via.placeholder.com/300x180/4a90e2/ffffff?text=T-Shirt" alt="T-Shirt">
+          <div class="price-tag">Ksh 500</div>
+        </div>
+        <div class="product-info">
+          <h3>Cotton T-Shirts</h3>
+          <p>Comfortable, breathable, available in various colors and sizes.</p>
+          <a href="https://wa.me/254710755022?text=Hi%2C%20I%20want%20to%20order%20a%20cotton%20T-shirt%20for%20Ksh%20500" class="order-btn">Order Now →</a>
+        </div>
+      </div>
+
+      <!-- Product 2 -->
+      <div class="product-card">
+        <div class="product-img">
+          <img src="https://via.placeholder.com/300x180/34c759/ffffff?text=Dress" alt="Dress">
+          <div class="price-tag">Ksh 1,200</div>
+        </div>
+        <div class="product-info">
+          <h3>Casual Dresses</h3>
+          <p>Stylish, affordable, perfect for everyday wear — various designs available.</p>
+          <a href="https://wa.me/254710755022?text=Hi%2C%20I%20want%20to%20order%20a%20casual%20dress%20for%20Ksh%201%2C200" class="order-btn">Order Now →</a>
+        </div>
+      </div>
+
+      <!-- Product 3 -->
+      <div class="product-card">
+        <div class="product-img">
+          <img src="https://via.placeholder.com/300x180/ff9e00/ffffff?text=Fabric" alt="Fabric">
+          <div class="price-tag">Ksh 800/meter</div>
+        </div>
+        <div class="product-info">
+          <h3>Tailoring Fabric</h3>
+          <p>High-quality cotton, wax prints, and plain fabrics for custom sewing.</p>
+          <a href="https://wa.me/254710755022?text=Hi%2C%20I%20want%20to%20order%20tailoring%20fabric%20at%20Ksh%20800%2Fmeter" class="order-btn">Order Now →</a>
+        </div>
+      </div>
+
+      <!-- Product 4 -->
+      <div class="product-card">
+        <div class="product-img">
+          <img src="https://via.placeholder.com/300x180/8a2be2/ffffff?text=Bag" alt="Bag">
+          <div class="price-tag">Ksh 400</div>
+        </div>
+        <div class="product-info">
+          <h3>Stylish Bags</h3>
+          <p>Handbags, backpacks, clutches — practical and fashionable.</p>
+          <a href="https://wa.me/254710755022?text=Hi%2C%20I%20want%20to%20order%20a%20stylish%20bag%20for%20Ksh%20400" class="order-btn">Order Now →</a>
+        </div>
+      </div>
+
+      <!-- Product 5 -->
+      <div class="product-card">
+        <div class="product-img">
+          <img src="https://via.placeholder.com/300x180/ff6b35/ffffff?text=Kitenge" alt="Kitenge">
+          <div class="price-tag">Ksh 1,000</div>
+        </div>
+        <div class="product-info">
+          <h3>Traditional Kitenge</h3>
+          <p>Vibrant wax prints for dresses, skirts, and traditional outfits.</p>
+          <a href="https://wa.me/254710755022?text=Hi%2C%20I%20want%20to%20order%20traditional%20kitenge%20for%20Ksh%201%2C000" class="order-btn">Order Now →</a>
+        </div>
+      </div>
+
+      <!-- Product 6 -->
+      <div class="product-card">
+        <div class="product-img">
+          <img src="https://via.placeholder.com/300x180/4a90e2/ffffff?text=Shoes" alt="Shoes">
+          <div class="price-tag">Ksh 1,500</div>
+        </div>
+        <div class="product-info">
+          <h3>Casual Shoes</h3>
+          <p>Comfortable sneakers, sandals, and loafers for men and women.</p>
+          <a href="https://wa.me/254710755022?text=Hi%2C%20I%20want%20to%20order%20casual%20shoes%20for%20Ksh%201%2C500" class="order-btn">Order Now →</a>
+        </div>
+      </div>
+
+      <!-- Product 7 -->
+      <div class="product-card">
+        <div class="product-img">
+          <img src="https://via.placeholder.com/300x180/34c759/ffffff?text=Jacket" alt="Jacket">
+          <div class="price-tag">Ksh 2,000</div>
+        </div>
+        <div class="product-info">
+          <h3>Light Jackets</h3>
+          <p>Perfect for cool evenings — windproof and stylish.</p>
+          <a href="https://wa.me/254710755022?text=Hi%2C%20I%20want%20to%20order%20a%20light%20jacket%20for%20Ksh%202%2C000" class="order-btn">Order Now →</a>
+        </div>
+      </div>
+
+      <!-- Product 8 -->
+      <div class="product-card">
+        <div class="product-img">
+          <img src="https://via.placeholder.com/300x180/ff9e00/ffffff?text=Scarf" alt="Scarf">
+          <div class="price-tag">Ksh 300</div>
+        </div>
+        <div class="product-info">
+          <h3>Fashion Scarves</h3>
+          <p>Colorful, lightweight, adds style to any outfit.</p>
+          <a href="https://wa.me/254710755022?text=Hi%2C%20I%20want%20to%20order%20a%20fashion%20scarf%20for%20Ksh%20300" class="order-btn">Order Now →</a>
+        </div>
+      </div>
+
+      <!-- Product 9 -->
+      <div class="product-card">
+        <div class="product-img">
+          <img src="https://via.placeholder.com/300x180/8a2be2/ffffff?text=Tailoring" alt="Tailoring">
+          <div class="price-tag">Ksh 500+</div>
+        </div>
+        <div class="product-info">
+          <h3>Tailoring Services</h3>
+          <p>Custom fitting, alterations, and stitching — quality guaranteed.</p>
+          <a href="https://wa.me/254710755022?text=Hi%2C%20I%20need%20tailoring%20services%20starting%20from%20Ksh%20500" class="order-btn">Book Now →</a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="contact-box">
+      <h2>Contact Us for Fashion</h2>
+      <p><strong>Email:</strong> gideonombongi936@gmail.com</p>
+      <p><strong>Phone/WhatsApp:</strong> 0710755022</p>
+      <p><strong>Serving:</strong> All of Nyanza Region — Kisumu, Rongo, Kisii, Migori</p>
+    </div>
+
+  </div>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 GR Enterprises. Proudly serving Nyanza Region, Kenya.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
