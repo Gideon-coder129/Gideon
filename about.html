@@ -6,7 +6,7 @@
   <title>About Us | GR Enterprises</title>
   <style>
     :root {
-      --primary: #4a90e2;
+      --primary: #4a90e2; /* Sky Blue */
       --accent: #ff6b35;
       --bg: #ffffff;
       --text: #222;
@@ -107,18 +107,46 @@
     }
     .feedback-comments {
       margin-top: 30px;
-      max-height: 300px;
+      max-height: 500px; /* Increased height to show more */
       overflow-y: auto;
       padding-right: 10px;
     }
     .comment {
       background: #f0f8ff;
-      padding: 15px;
+      padding: 20px; /* Increased padding for spacing */
       border-radius: 8px;
-      margin-bottom: 15px;
+      margin-bottom: 15px; /* Space between comments */
       font-size: 0.95rem;
     }
     .comment strong { color: var(--primary); }
+    .comment-actions {
+      display: flex;
+      gap: 10px;
+      margin-top: 10px;
+    }
+    .comment-action-btn {
+      background: #e0e0e0;
+      border: none;
+      padding: 5px 10px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 0.9rem;
+    }
+    .comment-action-btn:hover {
+      background: #d0d0d0;
+    }
+    .comment-replies {
+      margin-top: 10px;
+      padding-left: 20px;
+      border-left: 2px solid #ccc;
+    }
+    .reply-form {
+      margin-top: 10px;
+    }
+    .reply-form input, .reply-form button {
+      margin-right: 5px;
+      padding: 5px;
+    }
 
     .social-links {
       text-align: center;
@@ -179,7 +207,7 @@
         <div class="contact-card">
           <div class="contact-icon">💬</div> <!-- WhatsApp Icon -->
           <h3>Contact Us</h3>
-          <p><a href="https://wa.me/254710755022">+254710755022</a></p>
+          <p><a href="https://wa.me/254710755022">WhatsApp →</a></p> <!-- Changed to WhatsApp -->
         </div>
       </div>
     </div>
@@ -234,7 +262,7 @@
     <div class="social-links">
       <h2 class="section-title">Connect With Us</h2>
       <a href="https://tiktok.com/@grenterprises" target="_blank">🎵 TikTok</a>
-      <a href="https://x.com/grenterprises" target="_blank">🐦 X (Twitter)</a> <!-- Changed from Twitter to X -->
+      <a href="https://x.com/grenterprises" target="_blank">🐦 X (Twitter)</a>
       <a href="https://facebook.com/grenterprises" target="_blank">📘 Facebook</a>
       <a href="https://instagram.com/grenterprises" target="_blank">📸 Instagram</a>
     </div>
@@ -253,15 +281,120 @@
       const comments = JSON.parse(localStorage.getItem('feedbackComments')) || [];
       const commentsList = document.getElementById('commentsList');
       commentsList.innerHTML = '';
-      comments.forEach(comment => {
+
+      // Only show the last 5 comments (most recent)
+      const recentComments = comments.slice(-5);
+
+      recentComments.forEach((comment, index) => {
         const commentDiv = document.createElement('div');
         commentDiv.className = 'comment';
         commentDiv.innerHTML = `
           <strong>${comment.name}</strong> (${comment.rating}/5 stars)<br>
           "${comment.comment}"
+          <div class="comment-actions">
+            <button class="comment-action-btn like-btn" onclick="toggleReaction(${index}, 'like')">👍 Like (${comment.likes || 0})</button>
+            <button class="comment-action-btn dislike-btn" onclick="toggleReaction(${index}, 'dislike')">👎 Dislike (${comment.dislikes || 0})</button>
+            <button class="comment-action-btn reply-btn" onclick="toggleReply(${index})">💬 Reply</button>
+          </div>
+          <div id="replySection${index}" class="reply-section" style="display:none;">
+            <div class="reply-form">
+              <input type="text" placeholder="Your reply..." id="replyInput${index}">
+              <button onclick="addReply(${index})">Send</button>
+            </div>
+          </div>
+          <div id="replies${index}" class="comment-replies">
+            ${(comment.replies || []).map(reply => `<div><strong>You:</strong> ${reply}</div>`).join('')}
+          </div>
         `;
         commentsList.appendChild(commentDiv);
       });
+
+      // Add "View More" button if there are more than 5 comments
+      if (comments.length > 5) {
+        const viewMoreBtn = document.createElement('button');
+        viewMoreBtn.className = 'btn';
+        viewMoreBtn.style.marginTop = '20px';
+        viewMoreBtn.textContent = 'View All Comments';
+        viewMoreBtn.onclick = function() {
+          showAllComments(comments);
+        };
+        commentsList.appendChild(viewMoreBtn);
+      }
+    }
+
+    // Toggle like/dislike
+    function toggleReaction(index, reaction) {
+      const comments = JSON.parse(localStorage.getItem('feedbackComments')) || [];
+      if (!comments[index][reaction + 's']) {
+        comments[index][reaction + 's'] = 0;
+      }
+      comments[index][reaction + 's']++;
+      localStorage.setItem('feedbackComments', JSON.stringify(comments));
+      loadComments(); // Reload to update counts
+    }
+
+    // Toggle reply section
+    function toggleReply(index) {
+      const replySection = document.getElementById(`replySection${index}`);
+      if (replySection.style.display === 'none') {
+        replySection.style.display = 'block';
+      } else {
+        replySection.style.display = 'none';
+      }
+    }
+
+    // Add reply to a comment
+    function addReply(index) {
+      const replyInput = document.getElementById(`replyInput${index}`);
+      const replyText = replyInput.value.trim();
+      if (replyText) {
+        const comments = JSON.parse(localStorage.getItem('feedbackComments')) || [];
+        if (!comments[index].replies) {
+          comments[index].replies = [];
+        }
+        comments[index].replies.push(replyText);
+        localStorage.setItem('feedbackComments', JSON.stringify(comments));
+        replyInput.value = '';
+        loadComments(); // Reload to show reply
+      }
+    }
+
+    // Show all comments
+    function showAllComments(allComments) {
+      const commentsList = document.getElementById('commentsList');
+      commentsList.innerHTML = '';
+
+      allComments.forEach((comment, index) => {
+        const commentDiv = document.createElement('div');
+        commentDiv.className = 'comment';
+        commentDiv.innerHTML = `
+          <strong>${comment.name}</strong> (${comment.rating}/5 stars)<br>
+          "${comment.comment}"
+          <div class="comment-actions">
+            <button class="comment-action-btn like-btn" onclick="toggleReaction(${index}, 'like')">👍 Like (${comment.likes || 0})</button>
+            <button class="comment-action-btn dislike-btn" onclick="toggleReaction(${index}, 'dislike')">👎 Dislike (${comment.dislikes || 0})</button>
+            <button class="comment-action-btn reply-btn" onclick="toggleReply(${index})">💬 Reply</button>
+          </div>
+          <div id="replySection${index}" class="reply-section" style="display:none;">
+            <div class="reply-form">
+              <input type="text" placeholder="Your reply..." id="replyInput${index}">
+              <button onclick="addReply(${index})">Send</button>
+            </div>
+          </div>
+          <div id="replies${index}" class="comment-replies">
+            ${(comment.replies || []).map(reply => `<div><strong>You:</strong> ${reply}</div>`).join('')}
+          </div>
+        `;
+        commentsList.appendChild(commentDiv);
+      });
+
+      // Add "Show Less" button
+      const showLessBtn = document.createElement('button');
+      showLessBtn.className = 'btn';
+      showLessBtn.style.marginTop = '20px';
+      showLessBtn.textContent = 'Show Recent Comments';
+      showLessBtn.onclick = loadComments;
+      commentsList.appendChild(showLessBtn);
     }
 
     // Submit feedback
@@ -275,7 +408,10 @@
         name: name,
         rating: rating,
         comment: comment,
-        timestamp: new Date().toISOString()
+        timestamp: new Date().toISOString(),
+        likes: 0,
+        dislikes: 0,
+        replies: []
       };
 
       const comments = JSON.parse(localStorage.getItem('feedbackComments')) || [];
