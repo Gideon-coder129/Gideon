@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Drinks (Drink with GR) | GR Enterprises</title>
+  <style>
+    :root {
+      --primary: #4a90e2;
+      --bg: #ffffff;
+      --text: #222;
+      --light: #f8fbff;
+      --shadow: rgba(0,0,0,0.08);
+    }
+    * { margin:0; padding:0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+    body {
+      background: url('welcome-bg.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: var(--text);
+      line-height: 1.6;
+    }
+    .container { width: 90%; max-width: 1200px; margin: 0 auto; padding: 20px; }
+    header {
+      background: white;
+      padding: 15px 0;
+      box-shadow: 0 2px 8px var(--shadow);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .logo {
+      font-size: 24px;
+      font-weight: 800;
+      color: var(--primary);
+      letter-spacing: 2px;
+      display: inline-block;
+      padding: 8px 16px;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      transition: transform 0.2s;
+    }
+    .logo:hover {
+      transform: scale(1.05);
+    }
+    .nav-links {
+      display: flex;
+      gap: 20px;
+      margin-left: 20px;
+    }
+    .nav-links a {
+      color: var(--primary);
+      font-weight: 600;
+      padding: 6px 12px;
+      border-radius: 4px;
+      transition: background 0.2s;
+    }
+    .nav-links a:hover { background: #f0f8ff; }
+
+    .section-title {
+      text-align: center;
+      font-size: 2.2rem;
+      color: var(--primary);
+      margin: 60px 0 30px;
+    }
+
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+      margin: 30px 0;
+    }
+
+    .product-card {
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 15px var(--shadow);
+      transition: transform 0.3s;
+    }
+    .product-card:hover { transform: translateY(-8px); }
+
+    .product-img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      position: relative;
+    }
+    .price-tag {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: #ff6b35;
+      color: white;
+      padding: 5px 12px;
+      border-radius: 4px;
+      font-weight: 600;
+      font-size: 0.9rem;
+    }
+
+    .product-info {
+      padding: 20px;
+    }
+    .product-info h3 {
+      color: var(--primary);
+      margin-bottom: 10px;
+      font-size: 1.2rem;
+    }
+    .product-info p {
+      color: #666;
+      margin-bottom: 15px;
+      font-size: 0.95rem;
+    }
+
+    .order-btn {
+      display: inline-block;
+      width: 100%;
+      padding: 10px;
+      background: var(--primary);
+      color: white;
+      text-align: center;
+      border-radius: 6px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+    .order-btn:hover {
+      background: #3a7bd5;
+    }
+
+    .contact-box {
+      background: rgba(255,255,255,0.95);
+      padding: 30px;
+      border-radius: 12px;
+      margin: 50px 0;
+      text-align: center;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+    .contact-box h2 { color: var(--primary); margin-bottom: 15px; }
+    .contact-box p {
+      margin: 8px 0;
+      font-size: 1.05rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px 0;
+      color: #666;
+      margin-top: 60px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container">
+      <a href="index.html" class="logo">GR</a>
+      <div class="nav-links">
+        <a href="index.html">Welcome</a>
+        <a href="home.html">Home</a>
+        <a href="order.html">Order Form</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+
+    <h1 class="section-title">Drinks (Drink with GR)</h1>
+    <p style="text-align:center; max-width:800px; margin:0 auto 30px;">
+      Quench your thirst with our selection of cold drinks — from Pepsi and Coca-Cola to juices and energy drinks. All at the best price in Nyanza!
+    </p>
+
+    <div class="products-grid">
+
+      <!-- Product 1 -->
+      <div class="product-card">
+        <div class="product-img">
+          <img src="https://via.placeholder.com/300x180/ff6b35/ffffff?text=Pepsi+300ml" alt="Pepsi 300ml">
+          <div class="price-tag">Ksh 40</div>
+        </div>
+        <div class="product-info">
+          <h3>Pepsi (300ml)</h3>
+          <p>Crisp, refreshing cola taste — the classic choice.</p>
+          <a href="https://wa.me/254710755022?text=Hi%2C%20I%20want%20to%20order%20Pepsi%20300ml%20for%20Ksh%2040" class="order-btn">Order Now →</a>
+        </div>
+      </div>
+
+      <!-- Product 2 -->
+      <div class="product-card">
+        <div class="product-img">
+          <img src="https://via.placeholder.com/300x180/4a90e2/ffffff?text=Coke+500ml" alt="Coca-Cola 500ml">
+          <div class="price-tag">Ksh 70</div>
+        </div>
+        <div class="product-info">
+          <h3>Coca-Cola (500ml)</h3>
+          <p>The original, ice-cold — refreshment at its finest.</p>
+          <a href="https://wa.me/254710755022?text=Hi%2C%20I%20want%20to%20order%20Coca-Cola%20500ml%20for%20Ksh%2070" class="order-btn">Order Now →</a>
+        </div>
+      </div>
+
+      <!-- Product 3 -->
+      <div class="product-card">
+        <div class="product-img">
+          <img src="https://via.placeholder.com/300x180/34c759/ffffff?text=Sprite+2L" alt="Sprite 2L">
+          <div class="price-tag">Ksh 250</div>
+        </div>
+        <div class="product-info">
+          <h3>Sprite (2L)</h3>
+          <p>Clean, crisp lemon-lime taste — perfect for sharing.</p>
+          <a href="https://wa.me/254710755022?text=Hi%2C%20I%20want%20to%20order%20Sprite%202L%20for%20Ksh%20250" class="order-btn">Order Now →</a>
+        </div>
+      </div>
+
+      <!-- Product 4 -->
+      <div class="product-card">
+        <div class="product-img">
+          <img src="https://via.placeholder.com/300x180/ff9e00/ffffff?text=Fanta+1L" alt="Fanta 1L">
+          <div class="price-tag">Ksh 120</div>
+        </div>
+        <div class="product-info">
+          <h3>Fanta Orange (1L)</h3>
+          <p>Bursting with fruity flavor — a sweet, fizzy treat.</p>
+          <a href="https://wa.me/254710755022?text=Hi%2C%20I%20want%20to%20order%20Fanta%20Orange%201L%20for%20Ksh%20120" class="order-btn">Order Now →</a>
+        </div>
+      </div>
+
+      <!-- Product 5 -->
+      <div class="product-card">
+        <div class="product-img">
+          <img src="https://via.placeholder.com/300x180/8a2be2/ffffff?text=Energy+Drink" alt="Energy Drink">
+          <div class="price-tag">Ksh 100</div>
+        </div>
+        <div class="product-info">
+          <h3>Energy Drinks</h3>
+          <p>Monster, Red Bull — boost your energy for the day.</p>
+          <a href="https://wa.me/254710755022?text=Hi%2C%20I%20want%20to%20order%20an%20energy%20drink%20for%20Ksh%20100" class="order-btn">Order Now →</a>
+        </div>
+      </div>
+
+      <!-- Product 6 -->
+      <div class="product-card">
+        <div class="product-img">
+          <img src="https://via.placeholder.com/300x180/ff6b35/ffffff?text=Juice" alt="Fresha Juice">
+          <div class="price-tag">Ksh 60</div>
+        </div>
+        <div class="product-info">
+          <h3>Fresha Juice</h3>
+          <p>Mango, pineapple, passion fruit — natural fruit goodness.</p>
+          <a href="https://wa.me/254710755022?text=Hi%2C%20I%20want%20to%20order%20Fresha%20juice%20for%20Ksh%2060" class="order-btn">Order Now →</a>
+        </div>
+      </div>
+
+      <!-- Product 7 -->
+      <div class="product-card">
+        <div class="product-img">
+          <img src="https://via.placeholder.com/300x180/4a90e2/ffffff?text=Water" alt="Bottled Water">
+          <div class="price-tag">Ksh 30</div>
+        </div>
+        <div class="product-info">
+          <h3>Bottled Water</h3>
+          <p>Kilifi, Chui, Dasani — pure, clean hydration.</p>
+          <a href="https://wa.me/254710755022?text=Hi%2C%20I%20want%20to%20order%20bottled%20water%20for%20Ksh%2030" class="order-btn">Order Now →</a>
+        </div>
+      </div>
+
+      <!-- Product 8 -->
+      <div class="product-card">
+        <div class="product-img">
+          <img src="https://via.placeholder.com/300x180/34c759/ffffff?text=Crate" alt="Crate of Drinks">
+          <div class="price-tag">Ksh 900</div>
+        </div>
+        <div class="product-info">
+          <h3>Kenyan Crate</h3>
+          <p>24 bottles/cans of your choice — perfect for parties!</p>
+          <a href="https://wa.me/254710755022?text=Hi%2C%20I%20want%20to%20order%20a%20kenyan%20crate%20for%20Ksh%20900" class="order-btn">Order Now →</a>
+        </div>
+      </div>
+
+      <!-- Product 9 -->
+      <div class="product-card">
+        <div class="product-img">
+          <img src="https://via.placeholder.com/300x180/ff9e00/ffffff?text=Krest" alt="Krest Ginger Beer">
+          <div class="price-tag">Ksh 80</div>
+        </div>
+        <div class="product-info">
+          <h3>Krest Ginger Beer (500ml)</h3>
+          <p>Zesty ginger flavor — a unique, refreshing alternative.</p>
+          <a href="https://wa.me/254710755022?text=Hi%2C%20I%20want%20to%20order%20Krest%20ginger%20beer%20for%20Ksh%2080" class="order-btn">Order Now →</a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="contact-box">
+      <h2>Contact Us for Drinks</h2>
+      <p><strong>Email:</strong> gideonombongi936@gmail.com</p>
+      <p><strong>Phone/WhatsApp:</strong> 0710755022</p>
+      <p><strong>Serving:</strong> All of Nyanza Region — Kisumu, Rongo, Kisii, Migori</p>
+    </div>
+
+  </div>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 GR Enterprises. Proudly serving Nyanza Region, Kenya.</p>
+    </div>
+  </footer>
+
+</body>
+            </html>
