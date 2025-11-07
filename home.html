@@ -1,20 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta name="description" content="GR Enterprises - Your trusted provider of electronics, repairs, cereals, TV mounting & cyber services in Nyanza Region (Kisumu, Rongo, Kisii, Migori). Fast, affordable, and reliable.">
-<meta name="keywords" content="GR Enterprises, electronics shop, phone repair, cereals, TV mounting, cyber services, Nyanza, Kisumu, Rongo, Kisii, Migori, Kenya">
-<meta name="author" content="GR Enterprises">
-<meta property="og:title" content="GR Enterprises | Electronics, Repairs, Cereals, Cyber Services in Nyanza">
-<meta property="og:description" content="Selling electronics, fixing phones, supplying cereals, TV mounting & cyber services across Nyanza Region. Visit today!">
-<meta property="og:image" content="https://gideon-coder129.github.io/welcome-bg.jpg">
-<meta property="og:url" content="https://gideon-coder129.github.io">
-<meta name="robots" content="index, follow">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <!-- ✅ ADDED SEO META TAGS -->
+  <meta name="description" content="GR Enterprises - Your one-stop shop for electronics, cereals, repairs, TV mounting & cyber services across Nyanza Region (Kisumu, Rongo, Kisii, Migori). Quality, speed, and value.">
+  <meta name="keywords" content="GR Enterprises, electronics shop, phone repair, cereals, TV mounting, cyber services, Nyanza, Kisumu, Rongo, Kisii, Migori, Kenya">
+  <meta name="author" content="GR Enterprises">
+  <meta property="og:title" content="GR Enterprises | Electronics, Repairs, Cereals, Cyber Services in Nyanza">
+  <meta property="og:description" content="Selling electronics, fixing phones, supplying cereals, TV mounting & cyber services across Nyanza Region. Visit today!">
+  <meta property="og:image" content="https://gideon-coder129.github.io/Gideon/welcome-bg.jpg">
+  <meta property="og:url" content="https://gideon-coder129.github.io/Gideon/home.html">
+  <meta name="robots" content="index, follow">
+  <!-- END OF SEO META TAGS -->
   <title>GR Enterprises | Nyanza Region</title>
   <style>
     :root {
-      --primary: #4a90e2; /* Sky Blue */
+      --primary: #4a90e2;
       --bg: #ffffff;
       --text: #222;
       --light: #f8fbff;
@@ -101,23 +103,12 @@
     }
     .service-card:hover { transform: translateY(-8px); }
 
-    /* ✅ FIXED IMAGE SIZE */
     .service-img {
       width: 100%;
       height: 180px;
-      overflow: hidden;
+      object-fit: cover;
       position: relative;
     }
-    .service-img img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover; /* ✅ This crops images to fit perfectly */
-      transition: transform 0.3s;
-    }
-    .service-img img:hover {
-      transform: scale(1.1);
-    }
-
     .service-title {
       color: var(--primary);
       font-size: 1.2rem;
