@@ -3,21 +3,20 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <!-- ✅ SEO META TAGS -->
-<meta name="description" content="GR Enterprises - Your trusted provider of electronics, cereals, repairs, TV mounting & cyber services in Nyanza Region (Kisumu, Rongo, Kisii, Migori). Fast, affordable, and reliable.">
-<meta name="keywords" content="GR Enterprises, electronics shop, phone repair, cereals, TV mounting, cyber services, Nyanza, Kisumu, Rongo, Kisii, Migori, Kenya">
-<meta name="author" content="GR Enterprises">
-<meta property="og:title" content="GR Enterprises | Electronics, Repairs, Cereals, Cyber Services in Nyanza">
-<meta property="og:description" content="Selling electronics, fixing phones, supplying cereals, TV mounting & cyber services across Nyanza Region. Visit today!">
-<meta property="og:image" content="https://gideon-coder129.github.io/Gideon/welcome-bg.jpg">
-<meta property="og:url" content="https://gideon-coder129.github.io/Gideon/">
-<meta name="robots" content="index, follow">
-<!-- END OF SEO META TAGS -->
+  <!-- ✅ ADDED SEO META TAGS -->
+  <meta name="description" content="GR Enterprises - Your trusted provider of electronics, cereals, repairs, TV mounting & cyber services in Nyanza Region (Kisumu, Rongo, Kisii, Migori). Fast, affordable, and reliable.">
+  <meta name="keywords" content="GR Enterprises, electronics shop, phone repair, cereals, TV mounting, cyber services, Nyanza, Kisumu, Rongo, Kisii, Migori, Kenya">
+  <meta name="author" content="GR Enterprises">
+  <meta property="og:title" content="GR Enterprises | Electronics, Repairs, Cereals, Cyber Services in Nyanza">
+  <meta property="og:description" content="Selling electronics, fixing phones, supplying cereals, TV mounting & cyber services across Nyanza Region. Visit today!">
+  <meta property="og:image" content="https://gideon-coder129.github.io/Gideon/welcome-bg.jpg">
+  <meta property="og:url" content="https://gideon-coder129.github.io/Gideon/about.html">
+  <meta name="robots" content="index, follow">
+  <!-- END OF SEO META TAGS -->
   <title>About Us | GR Enterprises</title>
   <style>
     :root {
-      --primary: #4a90e2; /* Sky Blue */
-      --accent: #ff6b35;
+      --primary: #4a90e2;
       --bg: #ffffff;
       --text: #222;
       --light: #f8fbff;
@@ -81,6 +80,7 @@
       margin-bottom: 20px;
       text-align: center;
     }
+
     .contact-info {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -115,61 +115,72 @@
       max-width: 600px;
       margin: 0 auto;
     }
+    .form-group {
+      margin-bottom: 20px;
+    }
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: 600;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      font-size: 1rem;
+    }
+    .btn {
+      display: inline-block;
+      padding: 15px 30px;
+      background: var(--primary);
+      color: white;
+      border-radius: 30px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+    .btn:hover {
+      background: #3a7bd5;
+    }
+
     .feedback-comments {
       margin-top: 30px;
-      max-height: 500px; /* Increased height to show more */
+      max-height: 300px;
       overflow-y: auto;
       padding-right: 10px;
     }
     .comment {
       background: #f0f8ff;
-      padding: 20px; /* Increased padding for spacing */
+      padding: 15px;
       border-radius: 8px;
-      margin-bottom: 15px; /* Space between comments */
+      margin-bottom: 15px;
       font-size: 0.95rem;
     }
     .comment strong { color: var(--primary); }
-    .comment-actions {
-      display: flex;
-      gap: 10px;
-      margin-top: 10px;
-    }
-    .comment-action-btn {
-      background: #e0e0e0;
-      border: none;
-      padding: 5px 10px;
-      border-radius: 4px;
-      cursor: pointer;
-      font-size: 0.9rem;
-    }
-    .comment-action-btn:hover {
-      background: #d0d0d0;
-    }
-    .comment-replies {
-      margin-top: 10px;
-      padding-left: 20px;
-      border-left: 2px solid #ccc;
-    }
-    .reply-form {
-      margin-top: 10px;
-    }
-    .reply-form input, .reply-form button {
-      margin-right: 5px;
-      padding: 5px;
-    }
 
+    /* NEW SOCIAL MEDIA SECTION */
     .social-links {
-      text-align: center;
+      background: rgba(255,255,255,0.95);
+      padding: 30px;
+      border-radius: 12px;
       margin: 40px 0;
+      text-align: center;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
     }
-    .social-links a {
+    .social-links h2 {
+      color: var(--primary);
+      margin-bottom: 20px;
+    }
+    .social-link {
       display: inline-block;
-      margin: 0 10px;
+      margin: 0 15px;
       font-size: 1.5rem;
       color: var(--primary);
+      text-decoration: none;
       transition: transform 0.3s;
     }
-    .social-links a:hover {
+    .social-link:hover {
       transform: scale(1.2);
     }
 
@@ -210,14 +221,14 @@
       <h2 class="section-title">Contact Us</h2>
       <div class="contact-info">
         <div class="contact-card">
-          <div class="contact-icon">📞</div> <!-- Call Icon -->
+          <div class="contact-icon">📞</div>
           <h3>Helpline</h3>
           <p><a href="tel:+254738613970">+254738613970</a></p>
         </div>
         <div class="contact-card">
-          <div class="contact-icon">💬</div> <!-- WhatsApp Icon -->
+          <div class="contact-icon">💬</div>
           <h3>Contact Us</h3>
-          <p><a href="https://wa.me/254710755022">WhatsApp →</a></p> <!-- Changed to WhatsApp -->
+          <p><a href="https://wa.me/254710755022">WhatsApp →</a></p>
         </div>
       </div>
     </div>
@@ -269,12 +280,11 @@
       </div>
     </div>
 
+    <!-- NEW SOCIAL MEDIA LINKS SECTION -->
     <div class="social-links">
-      <h2 class="section-title">Connect With Us</h2>
-      <a href="https://tiktok.com/@grenterprises" target="_blank">🎵 TikTok</a>
-      <a href="https://x.com/grenterprises" target="_blank">🐦 X (Twitter)</a>
-      <a href="https://facebook.com/grenterprises" target="_blank">📘 Facebook</a>
-      <a href="https://instagram.com/grenterprises" target="_blank">📸 Instagram</a>
+      <h2>Follow Us on Social Media</h2>
+      <a href="https://www.facebook.com/profile.php?id=61583300348781" target="_blank" class="social-link">📘 Facebook</a>
+      <a href="https://www.instagram.com/grenterpriseske?igsh=Y2p5bTBqaHc5dWdr" target="_blank" class="social-link">📸 Instagram</a>
     </div>
 
   </div>
@@ -291,120 +301,15 @@
       const comments = JSON.parse(localStorage.getItem('feedbackComments')) || [];
       const commentsList = document.getElementById('commentsList');
       commentsList.innerHTML = '';
-
-      // Only show the last 5 comments (most recent)
-      const recentComments = comments.slice(-5);
-
-      recentComments.forEach((comment, index) => {
+      comments.forEach(comment => {
         const commentDiv = document.createElement('div');
         commentDiv.className = 'comment';
         commentDiv.innerHTML = `
           <strong>${comment.name}</strong> (${comment.rating}/5 stars)<br>
           "${comment.comment}"
-          <div class="comment-actions">
-            <button class="comment-action-btn like-btn" onclick="toggleReaction(${index}, 'like')">👍 Like (${comment.likes || 0})</button>
-            <button class="comment-action-btn dislike-btn" onclick="toggleReaction(${index}, 'dislike')">👎 Dislike (${comment.dislikes || 0})</button>
-            <button class="comment-action-btn reply-btn" onclick="toggleReply(${index})">💬 Reply</button>
-          </div>
-          <div id="replySection${index}" class="reply-section" style="display:none;">
-            <div class="reply-form">
-              <input type="text" placeholder="Your reply..." id="replyInput${index}">
-              <button onclick="addReply(${index})">Send</button>
-            </div>
-          </div>
-          <div id="replies${index}" class="comment-replies">
-            ${(comment.replies || []).map(reply => `<div><strong>You:</strong> ${reply}</div>`).join('')}
-          </div>
         `;
         commentsList.appendChild(commentDiv);
       });
-
-      // Add "View More" button if there are more than 5 comments
-      if (comments.length > 5) {
-        const viewMoreBtn = document.createElement('button');
-        viewMoreBtn.className = 'btn';
-        viewMoreBtn.style.marginTop = '20px';
-        viewMoreBtn.textContent = 'View All Comments';
-        viewMoreBtn.onclick = function() {
-          showAllComments(comments);
-        };
-        commentsList.appendChild(viewMoreBtn);
-      }
-    }
-
-    // Toggle like/dislike
-    function toggleReaction(index, reaction) {
-      const comments = JSON.parse(localStorage.getItem('feedbackComments')) || [];
-      if (!comments[index][reaction + 's']) {
-        comments[index][reaction + 's'] = 0;
-      }
-      comments[index][reaction + 's']++;
-      localStorage.setItem('feedbackComments', JSON.stringify(comments));
-      loadComments(); // Reload to update counts
-    }
-
-    // Toggle reply section
-    function toggleReply(index) {
-      const replySection = document.getElementById(`replySection${index}`);
-      if (replySection.style.display === 'none') {
-        replySection.style.display = 'block';
-      } else {
-        replySection.style.display = 'none';
-      }
-    }
-
-    // Add reply to a comment
-    function addReply(index) {
-      const replyInput = document.getElementById(`replyInput${index}`);
-      const replyText = replyInput.value.trim();
-      if (replyText) {
-        const comments = JSON.parse(localStorage.getItem('feedbackComments')) || [];
-        if (!comments[index].replies) {
-          comments[index].replies = [];
-        }
-        comments[index].replies.push(replyText);
-        localStorage.setItem('feedbackComments', JSON.stringify(comments));
-        replyInput.value = '';
-        loadComments(); // Reload to show reply
-      }
-    }
-
-    // Show all comments
-    function showAllComments(allComments) {
-      const commentsList = document.getElementById('commentsList');
-      commentsList.innerHTML = '';
-
-      allComments.forEach((comment, index) => {
-        const commentDiv = document.createElement('div');
-        commentDiv.className = 'comment';
-        commentDiv.innerHTML = `
-          <strong>${comment.name}</strong> (${comment.rating}/5 stars)<br>
-          "${comment.comment}"
-          <div class="comment-actions">
-            <button class="comment-action-btn like-btn" onclick="toggleReaction(${index}, 'like')">👍 Like (${comment.likes || 0})</button>
-            <button class="comment-action-btn dislike-btn" onclick="toggleReaction(${index}, 'dislike')">👎 Dislike (${comment.dislikes || 0})</button>
-            <button class="comment-action-btn reply-btn" onclick="toggleReply(${index})">💬 Reply</button>
-          </div>
-          <div id="replySection${index}" class="reply-section" style="display:none;">
-            <div class="reply-form">
-              <input type="text" placeholder="Your reply..." id="replyInput${index}">
-              <button onclick="addReply(${index})">Send</button>
-            </div>
-          </div>
-          <div id="replies${index}" class="comment-replies">
-            ${(comment.replies || []).map(reply => `<div><strong>You:</strong> ${reply}</div>`).join('')}
-          </div>
-        `;
-        commentsList.appendChild(commentDiv);
-      });
-
-      // Add "Show Less" button
-      const showLessBtn = document.createElement('button');
-      showLessBtn.className = 'btn';
-      showLessBtn.style.marginTop = '20px';
-      showLessBtn.textContent = 'Show Recent Comments';
-      showLessBtn.onclick = loadComments;
-      commentsList.appendChild(showLessBtn);
     }
 
     // Submit feedback
@@ -418,10 +323,7 @@
         name: name,
         rating: rating,
         comment: comment,
-        timestamp: new Date().toISOString(),
-        likes: 0,
-        dislikes: 0,
-        replies: []
+        timestamp: new Date().toISOString()
       };
 
       const comments = JSON.parse(localStorage.getItem('feedbackComments')) || [];
