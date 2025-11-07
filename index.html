@@ -1,22 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta name="description" content="GR Enterprises - Your trusted provider of electronics, repairs, cereals, TV mounting & cyber services in Nyanza Region (Kisumu, Rongo, Kisii, Migori). Fast, affordable, and reliable.">
-<meta name="keywords" content="GR Enterprises, electronics shop, phone repair, cereals, TV mounting, cyber services, Nyanza, Kisumu, Rongo, Kisii, Migori, Kenya">
-<meta name="author" content="GR Enterprises">
-<meta property="og:title" content="GR Enterprises | Electronics, Repairs, Cereals, Cyber Services in Nyanza">
-<meta property="og:description" content="Selling electronics, fixing phones, supplying cereals, TV mounting & cyber services across Nyanza Region. Visit today!">
-<meta property="og:image" content="https://gideon-coder129.github.io/welcome-bg.jpg">
-<meta property="og:url" content="https://gideon-coder129.github.io">
-<meta name="robots" content="index, follow">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <!-- ✅ ADDED SEO META TAGS -->
+  <meta name="description" content="GR Enterprises - Your trusted provider of electronics, cereals, repairs, TV mounting & cyber services in Nyanza Region (Kisumu, Rongo, Kisii, Migori). Fast, affordable, and reliable.">
+  <meta name="keywords" content="GR Enterprises, electronics shop, phone repair, cereals, TV mounting, cyber services, Nyanza, Kisumu, Rongo, Kisii, Migori, Kenya">
+  <meta name="author" content="GR Enterprises">
+  <meta property="og:title" content="GR Enterprises | Electronics, Repairs, Cereals, Cyber Services in Nyanza">
+  <meta property="og:description" content="Selling electronics, fixing phones, supplying cereals, TV mounting & cyber services across Nyanza Region. Visit today!">
+  <meta property="og:image" content="https://gideon-coder129.github.io/Gideon/welcome-bg.jpg">
+  <meta property="og:url" content="https://gideon-coder129.github.io/Gideon/">
+  <meta name="robots" content="index, follow">
+  <!-- END OF SEO META TAGS -->
   <title>Welcome to GR Enterprises</title>
   <style>
     :root {
-      --primary: #4a90e2; /* Sky Blue */
+      --primary: #4a90e2;
       --accent: #ff6b35;
-      --text: #ffffff; /* White text */
+      --text: #ffffff;
       --shadow: rgba(0,0,0,0.5);
     }
     * { margin:0; padding:0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
@@ -27,14 +29,7 @@
       line-height: 1.6;
       overflow-x: hidden;
     }
-    .container {
-      width: 90%;
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 20px;
-    }
-
-    /* Header Logo */
+    .container { width: 90%; max-width: 1200px; margin: 0 auto; padding: 20px; }
     .header-logo {
       text-align: center;
       padding: 30px 0;
@@ -60,8 +55,6 @@
     .logo:hover {
       transform: scale(1.05);
     }
-
-    /* Welcome Message */
     .welcome-section {
       text-align: center;
       padding: 40px 20px;
@@ -86,8 +79,6 @@
       margin: 20px 0;
       text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
     }
-
-    /* Login Form */
     .login-form {
       background: rgba(255,255,255,0.1);
       padding: 30px;
@@ -128,87 +119,42 @@
       background: #3a7bd5;
       transform: translateY(-2px);
     }
-
-    /* Page Links */
-    .page-links {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 20px;
+    .visit-btn {
+      display: block;
       margin: 40px auto;
-      max-width: 600px;
-    }
-    .page-link {
-      background: rgba(255,255,255,0.2);
-      padding: 20px;
-      border-radius: 12px;
-      text-align: center;
-      color: white;
-      font-weight: 600;
-      text-decoration: none;
-      transition: transform 0.3s;
-    }
-    .page-link:hover {
-      background: rgba(255,255,255,0.3);
-      transform: translateY(-5px);
-    }
-
-    /* Testimonials Slideshow */
-    .testimonials-section {
-      background: rgba(255,255,255,0.1);
-      padding: 30px;
-      border-radius: 12px;
-      margin: 40px auto;
-      max-width: 800px;
-      box-shadow: 0 4px 20px var(--shadow);
-    }
-    .testimonial-slider {
-      background: rgba(255,255,255,0.9);
-      padding: 20px;
-      border-radius: 8px;
-      text-align: center;
-      color: #222;
-    }
-    .testimonial-text {
-      font-style: italic;
-      margin-bottom: 10px;
-      font-size: 1.1rem;
-    }
-    .testimonial-author {
-      font-weight: 600;
-      color: var(--primary);
-    }
-
-    /* Top Rated Service */
-    .top-service {
-      text-align: center;
-      padding: 30px;
+      padding: 15px 40px;
       background: var(--accent);
-      border-radius: 12px;
-      margin: 40px auto;
-      max-width: 500px;
-      box-shadow: 0 4px 20px var(--shadow);
-    }
-    .top-service h3 {
       color: white;
-      margin-bottom: 10px;
-    }
-    .top-service p {
-      color: white;
-      font-size: 1.2rem;
-      margin: 10px 0;
-    }
-    .top-service-link {
-      display: inline-block;
-      padding: 10px 20px;
-      background: white;
-      color: var(--accent);
-      border-radius: 20px;
+      border-radius: 30px;
       font-weight: 600;
       text-decoration: none;
-      margin-top: 10px;
+      transition: all 0.3s;
     }
-
-    /* Footer */
+    .visit-btn:hover {
+      background: #ff5722;
+      transform: translateY(-2px);
+    }
+    .marquee-container {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(0,0,0,0.7);
+      color: var(--text);
+      padding: 10px 20px;
+      z-index: 1000;
+      overflow: hidden;
+    }
+    .marquee {
+      white-space: nowrap;
+      animation: marquee 20s linear infinite;
+      font-size: 1.1rem;
+      font-weight: 600;
+    }
+    @keyframes marquee {
+      0% { transform: translateX(100%); }
+      100% { transform: translateX(-100%); }
+    }
     footer {
       text-align: center;
       padding: 20px;
@@ -220,12 +166,10 @@
 </head>
 <body>
 
-  <!-- Header Logo -->
   <div class="header-logo">
     <div class="logo">GR</div>
   </div>
 
-  <!-- Welcome Section -->
   <div class="welcome-section">
     <h1 class="welcome-title">Welcome to GR Enterprises</h1>
     <p class="welcome-text">
@@ -236,7 +180,6 @@
     <p class="negotiable">💡 All prices are negotiable — feel free to tag the price of your pocket when making orders!</p>
   </div>
 
-  <!-- Login Form -->
   <div class="login-form">
     <h2 style="color: var(--primary); margin-bottom: 20px;">Log In (Optional)</h2>
     <form id="loginForm">
@@ -256,92 +199,37 @@
     </form>
   </div>
 
-  <!-- Page Links -->
-  <div class="page-links">
-    <a href="home.html" class="page-link">🏠 Services</a>
-    <a href="order.html" class="page-link">🛒 Order Now</a>
-    <a href="about.html" class="page-link">ℹ️ About Us</a>
-  </div>
+  <a href="home.html" class="visit-btn">👉 Visit Site →</a>
 
-  <!-- Approved Customer Stories Slideshow -->
-  <div class="testimonials-section">
-    <h2 style="color: var(--primary); text-align:center; margin-bottom:20px;">🌟 Customer Stories</h2>
-    <div id="testimonialSlider" class="testimonial-slider">
-      <blockquote id="testimonialText" class="testimonial-text">
-        “GR Enterprises saved my business with KRA eTIMS registration — fast and affordable!”
-      </blockquote>
-      <p id="testimonialAuthor" class="testimonial-author">
-        – Jane, Rongo
-      </p>
+  <div class="marquee-container">
+    <div class="marquee">
+      🎉 GR Enterprises — Serving Kisumu, Rongo, Kisii & Migori with Quality & Speed! 🎉
+      | 
+      💼 Fast Repairs • 📱 Latest Electronics • 🍽️ Fresh Cereals • 🖥️ Cyber Services • 📺 Professional TV Mounting
+      | 
+      📞 Call/WhatsApp: 0710755022 • ✉️ gideonombongi936@gmail.com
     </div>
   </div>
 
-  <!-- Top Rated Service -->
-  <div class="top-service">
-    <h3>🏆 Top Rated Service</h3>
-    <p><strong>Electronics</strong> – 4.8 ★ (150+ reviews)</p>
-    <a href="electronics.html" class="top-service-link">Explore Now →</a>
-  </div>
-
-  <!-- Footer -->
   <footer>
     <p>&copy; 2025 GR Enterprises. Proudly serving Nyanza Region, Kenya.</p>
   </footer>
 
   <script>
-    // Save login info to localStorage
     document.getElementById('loginForm').addEventListener('submit', function(e) {
       e.preventDefault();
       const fullName = document.getElementById('fullName').value;
       const email = document.getElementById('email').value;
       const phone = document.getElementById('phone').value;
-      
       if (fullName || email || phone) {
         localStorage.setItem('userFullName', fullName);
         localStorage.setItem('userEmail', email);
         localStorage.setItem('userPhone', phone);
         alert('Info saved! Your details will auto-fill in the order form.');
       } else {
-        alert('You can skip this step — just click on any page below!');
+        alert('You can skip this step — just click "Visit Site"!');
       }
     });
-
-    // Slideshow functionality
-    const testimonials = [
-      {
-        text: "GR Enterprises saved my business with KRA eTIMS registration — fast and affordable!",
-        author: "– Jane, Rongo"
-      },
-      {
-        text: "Got my HELB loan application done in 1 hour! These guys are magic! 😂",
-        author: "– Mark, Kisii"
-      },
-      {
-        text: "TV mounted perfectly over my bed — no more neck pain! 10/10!",
-        author: "– Lucy, Migori"
-      },
-      {
-        text: "Fixed my laptop screen in 30 mins — genuine parts, fair price!",
-        author: "– James, Kisumu"
-      }
-    ];
-
-    let current = 0;
-    const testimonialText = document.getElementById('testimonialText');
-    const testimonialAuthor = document.getElementById('testimonialAuthor');
-
-    function showTestimonial() {
-      if (testimonials.length === 0) {
-        document.getElementById('testimonialSlider').style.display = 'none';
-        return;
-      }
-      testimonialText.textContent = `"${testimonials[current].text}"`;
-      testimonialAuthor.textContent = testimonials[current].author;
-      current = (current + 1) % testimonials.length;
-    }
-
-    showTestimonial();
-    setInterval(showTestimonial, 5000); // Change every 5 seconds
   </script>
 
 </body>
