@@ -6,7 +6,7 @@
   <title>GR Enterprises | Nyanza Region</title>
   <style>
     :root {
-      --primary: #4a90e2;
+      --primary: #4a90e2; /* Sky Blue */
       --bg: #ffffff;
       --text: #222;
       --light: #f8fbff;
@@ -93,12 +93,23 @@
     }
     .service-card:hover { transform: translateY(-8px); }
 
+    /* ✅ FIXED IMAGE SIZE */
     .service-img {
       width: 100%;
       height: 180px;
-      object-fit: cover;
+      overflow: hidden;
       position: relative;
     }
+    .service-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* ✅ This crops images to fit perfectly */
+      transition: transform 0.3s;
+    }
+    .service-img img:hover {
+      transform: scale(1.1);
+    }
+
     .service-title {
       color: var(--primary);
       font-size: 1.2rem;
@@ -150,7 +161,7 @@
     <section class="hero">
       <h1>GR Enterprises – Your One-Stop Shop for Nyanza Region!</h1>
       <p>
-        Serving Kisumu, Rongo, Kisii, Migori, and all of Nyanza with quality electronics, fresh cereals, professional repairs, TV mounting, cyber services, fashion, drinks, gas, and pool tables. 
+        Serving Kisumu, Rongo, Kisii, Migori, and all of Nyanza with quality electronics, fresh cereals, professional repairs, TV mounting, and cyber services. 
         Tap a service below to explore products and order today!
       </p>
     </section>
@@ -205,7 +216,7 @@
       <!-- Service 6 -->
       <div class="service-card">
         <div class="service-img">
-          <img src="https://via.placeholder.com/300x180/ff6b35/ffffff?text=Fashion" alt="Fashion & Style">
+          <img src="https://via.placeholder.com/300x180/ff6b35/ffffff?text=Fashion" alt="Fashion">
         </div>
         <div class="service-title">Fashion & Style</div>
         <a href="fashion.html" class="service-link">View Products →</a>
