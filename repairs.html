@@ -1,14 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta name="description" content="GR Enterprises - Your trusted provider of electronics, repairs, cereals, TV mounting & cyber services in Nyanza Region (Kisumu, Rongo, Kisii, Migori). Fast, affordable, and reliable.">
-<meta name="keywords" content="GR Enterprises, electronics shop, phone repair, cereals, TV mounting, cyber services, Nyanza, Kisumu, Rongo, Kisii, Migori, Kenya">
-<meta name="author" content="GR Enterprises">
-<meta property="og:title" content="GR Enterprises | Electronics, Repairs, Cereals, Cyber Services in Nyanza">
-<meta property="og:description" content="Selling electronics, fixing phones, supplying cereals, TV mounting & cyber services across Nyanza Region. Visit today!">
-<meta property="og:image" content="https://gideon-coder129.github.io/welcome-bg.jpg">
-<meta property="og:url" content="https://gideon-coder129.github.io">
-<meta name="robots" content="index, follow">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Repairs | GR Enterprises</title>
@@ -44,7 +36,7 @@
       display: inline-block;
       padding: 8px 16px;
       background: white;
-     border-radius: 8px;
+      border-radius: 8px;
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
       transition: transform 0.2s;
     }
@@ -88,11 +80,21 @@
     }
     .product-card:hover { transform: translateY(-8px); }
 
+    /* ✅ FIXED IMAGE SIZE */
     .product-img {
       width: 100%;
       height: 180px;
-      object-fit: cover;
+      overflow: hidden;
       position: relative;
+    }
+    .product-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* ✅ This crops images to fit perfectly */
+      transition: transform 0.3s;
+    }
+    .product-img img:hover {
+      transform: scale(1.1);
     }
     .price-tag {
       position: absolute;
@@ -167,7 +169,7 @@
         <a href="index.html">Welcome</a>
         <a href="home.html">Home</a>
         <a href="order.html">Order Form</a>
-        <div class="repairs-bg.jpg">
+        <a href="about.html">About Us</a>
       </div>
     </div>
   </header>
@@ -176,7 +178,7 @@
 
     <h1 class="section-title">Repairs</h1>
     <p style="text-align:center; max-width:800px; margin:0 auto 30px;">
-      Dropped your phone? Laptop won’t boot? TV showing lines? Don’t panic — GR’s expert technicians are here to save the day! We offer fast, affordable, and reliable repairs for phones, tablets, laptops, TVs, and more.
+      Dropped your phone? Laptop won’t boot? TV showing lines? Don’t panic — GR’s expert technicians are here to save the day! Fast, affordable, and reliable repairs for phones, tablets, laptops, TVs, and more.
     </p>
 
     <div class="products-grid">
@@ -196,8 +198,8 @@
 
       <!-- Product 2 -->
       <div class="product-card">
-        <div class="lenovo-ideapad-3.jpg">
-          <img src="https://via.placeholder.com/300x180/ff9e00/ffffff?text=Laptop+Repair" alt="Laptop Repair">
+        <div class="product-img">
+          <img src="https://via.placeholder.com/300x180/ff9e00/ffffff?text=Laptop+Fix" alt="Laptop Repair">
           <div class="price-tag">From Ksh 1,000</div>
         </div>
         <div class="product-info">
@@ -249,8 +251,8 @@
       <!-- Product 6 -->
       <div class="product-card">
         <div class="product-img">
-          <img src="https://via.placeholder.com/300x180/34c759/ffffff?text=Software+Fix" alt="Software & Virus Removal">
-          <div class="price-tag">From Ksh 1500</div>
+          <img src="https://via.placeholder.com/300x180/34c759/ffffff?text=Software+Fix" alt="Software Fix">
+          <div class="price-tag">From Ksh 400</div>
         </div>
         <div class="product-info">
           <h3>Software & Virus Removal</h3>
@@ -263,7 +265,7 @@
       <div class="product-card">
         <div class="product-img">
           <img src="https://via.placeholder.com/300x180/ff9e00/ffffff?text=Charging+Port" alt="Charging Port Repair">
-          <div class="price-tag">From Ksh 500</div>
+          <div class="price-tag">From Ksh 700</div>
         </div>
         <div class="product-info">
           <h3>Charging Port Repair</h3>
@@ -288,7 +290,7 @@
       <!-- Product 9 -->
       <div class="product-card">
         <div class="product-img">
-          <img src="https://via.placeholder.com/300x180/4a90e2/ffffff?text=Diagnostic" alt="Device Diagnostic">
+          <img src="https://via.placeholder.com/300x180/4a90e2/ffffff?text=Diagnostic" alt="Diagnostic">
           <div class="price-tag">Ksh 200</div>
         </div>
         <div class="product-info">
@@ -301,56 +303,56 @@
       <!-- Product 10 -->
       <div class="product-card">
         <div class="product-img">
-          <img src="https://via.placeholder.com/300x180/34c759/ffffff?text=Tablet+Repair" alt="Tablet Repair">
-          <div class="price-tag">From Ksh 800</div>
+          <img src="https://via.placeholder.com/300x180/ff6b35/ffffff?text=Headphone+Jack" alt="Headphone Jack Repair">
+          <div class="price-tag">Ksh 400</div>
         </div>
         <div class="product-info">
-          <h3>Tablet Repair</h3>
-          <p>Screen, battery, software — we fix all tablet models</p>
-          <a href="https://wa.me/254710755022?text=Hi%2C%20I%20need%20tablet%20repair%20starting%20from%20Ksh%20800" class="order-btn">Order Now →</a>
+          <h3>Headphone Jack Repair</h3>
+          <p>Phone jack broken? We fix it for you</p>
+          <a href="https://wa.me/254710755022?text=Hi%2C%20I%20need%20headphone%20jack%20repair%20for%20Ksh%20400" class="order-btn">Order Now →</a>
         </div>
       </div>
 
       <!-- Product 11 -->
       <div class="product-card">
         <div class="product-img">
-          <img src="https://via.placeholder.com/300x180/ff9e00/ffffff?text=Printer+Repair" alt="Printer Repair">
-          <div class="price-tag">From Ksh 1,000</div>
+          <img src="https://via.placeholder.com/300x180/34c759/ffffff?text=Power+Button" alt="Power Button Repair">
+          <div class="price-tag">Ksh 300</div>
         </div>
         <div class="product-info">
-          <h3>Printer Repair</h3>
-          <p>Won't print? Paper jam? Ink error? We fix it</p>
-          <a href="https://wa.me/254710755022?text=Hi%2C%20I%20need%20printer%20repair%20starting%20from%20Ksh%201%2C000" class="order-btn">Order Now →</a>
+          <h3>Power Button Repair</h3>
+          <p>Phone won’t turn on? We fix the button</p>
+          <a href="https://wa.me/254710755022?text=Hi%2C%20I%20need%20power%20button%20repair%20for%20Ksh%20300" class="order-btn">Order Now →</a>
         </div>
       </div>
 
       <!-- Product 12 -->
       <div class="product-card">
         <div class="product-img">
-          <img src="https://via.placeholder.com/300x180/8a2be2/ffffff?text=Game+Console" alt="Game Console Repair">
-          <div class="price-tag">From Ksh 1,500</div>
+          <img src="https://via.placeholder.com/300x180/ff9e00/ffffff?text=Volume+Keys" alt="Volume Keys Repair">
+          <div class="price-tag">Ksh 350</div>
         </div>
         <div class="product-info">
-          <h3>Game Console Repair</h3>
-          <p>PS4, PS5, Xbox — we fix controllers, disc drives, power issues</p>
-          <a href="https://wa.me/254710755022?text=Hi%2C%20I%20need%20game%20console%20repair%20starting%20from%20Ksh%201%2C500" class="order-btn">Order Now →</a>
+          <h3>Volume Keys Repair</h3>
+          <p>Broken volume buttons? We replace them</p>
+          <a href="https://wa.me/254710755022?text=Hi%2C%20I%20need%20volume%20keys%20repair%20for%20Ksh%20350" class="order-btn">Order Now →</a>
         </div>
       </div>
 
     </div>
 
     <div class="contact-box">
-      <h2>Book a Repair Today!</h2>
+      <h2>Contact Us for Repairs</h2>
       <p><strong>Email:</strong> gideonombongi936@gmail.com</p>
       <p><strong>Phone/WhatsApp:</strong> 0710755022</p>
-      <p><strong>Areas:</strong> All of Nyanza Region — Kisumu, Rongo, Kisii, Migori and country wide as well</p>
+      <p><strong>Serving:</strong> All of Nyanza Region — Kisumu, Rongo, Kisii, Migori</p>
     </div>
 
   </div>
 
   <footer>
     <div class="container">
-      <p>&copy; 2025 GR Market. Proudly serving Nyanza Region, Kenya.</p>
+      <p>&copy; 2025 GR Enterprises. Proudly serving Nyanza Region, Kenya.</p>
     </div>
   </footer>
 
