@@ -164,7 +164,7 @@
       background: rgba(255,255,255,0.95);
       padding: 30px;
       border-radius: 12px;
-      margin: 40px 0;
+      margin: 50px 0;
       text-align: center;
       box-shadow: 0 4px 15px rgba(0,0,0,0.1);
     }
@@ -211,7 +211,7 @@
     <div class="section">
       <h1 class="section-title">About GR Enterprises</h1>
       <p>
-        Welcome to GR Enterprises — your trusted partner for everything you need across Nyanza Region! 
+        Welcome to GR Enterprises — your trusted partner for everything you need across <strong>Nyanza Region</strong>!
         From electronics and groceries to TV mounting and cyber services — we deliver quality, speed, and value.
         Whether you're a student, job seeker, small business owner, or family looking to upgrade your tech — we’ve got you covered!
       </p>
@@ -280,11 +280,12 @@
       </div>
     </div>
 
-    <!-- NEW SOCIAL MEDIA LINKS SECTION -->
+    <!-- SOCIAL MEDIA LINKS SECTION -->
     <div class="social-links">
       <h2>Follow Us on Social Media</h2>
       <a href="https://www.facebook.com/profile.php?id=61583300348781" target="_blank" class="social-link">📘 Facebook</a>
       <a href="https://www.instagram.com/grenterpriseske?igsh=Y2p5bTBqaHc5dWdr" target="_blank" class="social-link">📸 Instagram</a>
+      <a href="https://tiktok.com/@gr_enterprises" target="_blank" class="social-link">🎵 TikTok</a>
     </div>
 
   </div>
@@ -301,6 +302,7 @@
       const comments = JSON.parse(localStorage.getItem('feedbackComments')) || [];
       const commentsList = document.getElementById('commentsList');
       commentsList.innerHTML = '';
+
       comments.forEach(comment => {
         const commentDiv = document.createElement('div');
         commentDiv.className = 'comment';
