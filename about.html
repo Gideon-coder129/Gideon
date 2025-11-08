@@ -229,9 +229,13 @@
           <p><a href="tel:+254738613970">+254738613970</a></p>
         </div>
         <div class="contact-card">
-          <div class="contact-icon">💬</div>
-          <h3>Contact Us</h3>
-          <p><a href="https://wa.me/254710755022">WhatsApp →</a></p>
+  <div class="contact-icon">
+    <a href="https://wa.me/254710755022" target="_blank">
+      <i class="fab fa-whatsapp" style="font-size: 60px; color: #25D366;"></i>
+    </a>
+  </div>
+  <h3>Contact Us</h3>
+  <p><a href="https://wa.me/254710755022" target="_blank" style="color: #25D366; font-weight: 600;">Chat on WhatsApp →</a></p>
         </div>
       </div>
     </div>
@@ -319,20 +323,24 @@
   <h3>Follow & Connect With Us 🌐</h3>
   <div class="social-icons-row">
     <!-- Facebook -->
-    <a href="https://www.facebook.com/profile.php?id=61583300348781" target="_blank" class="social-icon">
-      <i class="fab fa-facebook-f" style="font-size: 60px; color: #4a90e2;"></i>
+    <a href="https://www.facebook.com/profile.php?id=61583300348781" target="_blank" class="social-icon facebook">
+      <i class="fab fa-facebook-f"></i>
     </a>
     <!-- TikTok -->
-    <a href="https://tiktok.com/@gr_enterprises" target="_blank" class="social-icon">
-      <i class="fab fa-tiktok" style="font-size: 60px; color: #000000;"></i>
+    <a href="https://tiktok.com/@gr_enterprises" target="_blank" class="social-icon tiktok">
+      <i class="fab fa-tiktok"></i>
     </a>
     <!-- X (Twitter) -->
-    <a href="https://x.com/grenterprises" target="_blank" class="social-icon">
-      <i class="fab fa-x-twitter" style="font-size: 60px; color: #000000;"></i>
+    <a href="https://x.com/grenterprises" target="_blank" class="social-icon x">
+      <i class="fab fa-x-twitter"></i>
     </a>
     <!-- Instagram -->
-    <a href="https://www.instagram.com/grenterpriseske?igsh=Y2p5bTBqaHc5dWdr" target="_blank" class="social-icon">
-      <i class="fab fa-instagram" style="font-size: 60px; background: linear-gradient(45deg, #f09433, #e6683c, #d94144, #d94144); -webkit-background-clip: text; -webkit-text-fill-color: transparent;"></i>
+    <a href="https://www.instagram.com/grenterpriseske?igsh=Y2p5bTBqaHc5dWdr" target="_blank" class="social-icon instagram">
+      <i class="fab fa-instagram"></i>
+    </a>
+    <!-- WhatsApp -->
+    <a href="https://wa.me/254710755022" target="_blank" class="social-icon whatsapp">
+      <i class="fab fa-whatsapp"></i>
     </a>
   </div>
 </div>
@@ -357,13 +365,30 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
     transition: transform 0.3s;
-    border-radius: 12px;
-    padding: 10px;
+    color: white;
+    font-size: 30px;
   }
   .social-icon:hover {
     transform: scale(1.2);
-    background: rgba(255,255,255,0.2);
+  }
+  .facebook {
+    background: #4a90e2;
+  }
+  .tiktok {
+    background: #000000;
+  }
+  .x {
+    background: #000000;
+  }
+  .instagram {
+    background: linear-gradient(45deg, #f09433, #e6683c, #d94144, #d94144);
+  }
+  .whatsapp {
+    background: #25D366;
   }
 </style>
 
