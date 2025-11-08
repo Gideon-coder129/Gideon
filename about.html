@@ -194,17 +194,65 @@
 </head>
 <body>
 
-  <header>
-    <div class="container">
-      <a href="index.html" class="logo">GR</a>
-      <div class="nav-links">
-        <a href="index.html">Welcome</a>
-        <a href="home.html">Home</a>
-        <a href="order.html">Order Form</a>
-        <a href="about.html">About Us</a>
-      </div>
-    </div>
-  </header>
+  <header class="site-header">
+  <div class="container">
+    <a href="index.html" class="logo">GR</a>
+    <nav class="nav-menu">
+      <a href="index.html">🏠 Home</a>
+      <a href="home.html">📋 Services</a>
+      <a href="order.html">🛒 Order</a>
+      <a href="about.html">ℹ️ About</a>
+    </nav>
+  </div>
+</header>
+
+<style>
+  .site-header {
+    background: white;
+    padding: 15px 0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .logo {
+    font-size: 24px;
+    font-weight: 800;
+    color: #4a90e2;
+    letter-spacing: 2px;
+    display: inline-block;
+    padding: 8px 16px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.2s;
+  }
+  .logo:hover {
+    transform: scale(1.05);
+  }
+  .nav-menu {
+    display: flex;
+    gap: 20px;
+  }
+  .nav-menu a {
+    color: #4a90e2;
+    font-weight: 600;
+    padding: 6px 12px;
+    border-radius: 4px;
+    transition: background 0.2s;
+  }
+  .nav-menu a:hover {
+    background: #f0f8ff;
+  }
+</style>
 
   <div class="container">
 
